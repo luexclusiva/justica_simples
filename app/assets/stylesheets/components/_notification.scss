@@ -1,0 +1,22 @@
+
+.notification {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5px;
+  bottom: -10px;
+
+  .attention{
+    color: #ffca3a;
+  } 
+  
+  .normal {
+    color: #8ac926;
+  }
+
+  .danger{
+    color: red;
+  } 
+}
+
+
