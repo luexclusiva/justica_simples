@@ -1,0 +1,2 @@
+class Judicial < ApplicationRecord
+end
