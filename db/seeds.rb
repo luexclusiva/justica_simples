@@ -35,3 +35,24 @@ datas["results"].each_with_index do |data, index|
 end
 
 puts "All user created!"
+
+## Populating Steps table #################################################################
+require 'csv'
+
+file = "app/assets/csv/movimentos-jec.csv"
+
+csv_options = {
+  col_sep: ',',
+  quote_char: '"',
+  headers: :first_row
+}
+
+
+CSV.foreach(file, csv_options) do |row|
+  Step.create(
+    cnj_number: row[0],
+    integer: row[3],
+    description: row[1],
+    translation: row[2]
+  )
+end

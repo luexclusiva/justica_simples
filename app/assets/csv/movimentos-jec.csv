@@ -1,0 +1,40 @@
+Código,Movimento,Proposta de tradução,Relevância (1-5)
+378,Decisão ou Despacho Homologação,O acordo foi aceito pelo juiz,1
+12477,Não homologado,O acordo não foi aceito pelo juiz,1
+3,Decisão ou Despacho,O juiz decidiu algo,1
+11795,Julgado procedente o pedido - reconhecimento pelo réu,O juiz deu o pedido,1
+385,Julgamento com Resolução de Mérito,O processo foi decidido.,1
+12185,Decisão Interlocutória de Mérito,Parte do processo foi decidida,1
+848,Transitado em Julgado em,Não cabem mais recursos,2
+12164,Proferidas outras decisões não especificadas,O juiz decidiu algo,2
+12444,Deferido o pedido de,O pedido de #{nome} foi dado,2
+332,Concedida a Antecipação de tutela,O pedido de urgência foi dado,2
+888,Decisão ou Despacho Concessão em parte,O pedido de urgência foi dado em parte,2
+892,Concedida em parte a Medida Liminar,O pedido de urgência foi dado em parte,2
+968,Decisão ou Despacho Não-Concessão,O pedido de urgência foi negado,2
+12615,Realizada a Composição Civil,As partes realizaram um acordo,3
+348,Revogada a Medida Liminar,O juiz voltou atrás quanto ao pedido de urgência.,3
+339,Concedida a Medida Liminar,O pedido de urgência foi dado,3
+792,Não Concedida a Medida Liminar,O pedido de urgência foi negado,3
+12068,Determinado o levantamento da suspensão ou do sobrestamento dos autos,O processo não está mais suspenso. ,3
+12307,Decretada a revelia,O réu não apresentou defesa,3
+151,Decisão ou Despacho Concessão de efeito suspensivo,O pedido de urgência foi dado,4
+11009,Proferido despacho,O juiz deu andamento ao processo,5
+11010,Proferido despacho de mero expediente,O juiz deu andamento ao processo,5
+11,Decisão ou Despacho Declaração,O processo andou,5
+25,Processo Suspenso ou Sobrestado por,O processo está suspenso,5
+272,"Processo Suspenso por depender do julgamento de outra causa, de outro juízo ou declaração incidente",O processo está suspenso,5
+960,Processo Suspenso ou Sobrestado por Conflito de Competência,O processo está suspenso,5
+270,Processo Suspenso por Convenção das Partes,O processo está suspenso,5
+277,Processo Suspenso ou Sobrestado por Convenção das Partes para Cumprimento Voluntário da obrigação,O processo está suspenso,5
+271,"Processo Suspenso por Exceção de Incompetência, suspeição ou Impedimento",O processo está suspenso,5
+275,Processo Suspenso ou Sobrestado por Força maior,O processo está suspenso,5
+279,Processo Suspenso ou Sobrestado por Incidente de Insanidade Mental,O processo está suspenso,5
+898,Processo Suspenso ou Sobrestado por Por decisão judicial,O processo está suspenso,5
+11012,Processo Suspenso ou Sobrestado por Conflito de Competência,O processo está suspenso,5
+11013,Processo Suspenso por Convenção das Partes,O processo está suspenso,5
+11014,Processo Suspenso ou Sobrestado por Convenção das Partes para Cumprimento Voluntário da obrigação,O processo está suspenso,5
+11015,"Processo Suspenso por Exceção de Incompetência, suspeição ou Impedimento",O processo está suspenso,5
+11017,Processo Suspenso ou Sobrestado por Incidente de Insanidade Mental,O processo está suspenso,5
+193,Julgamento,O processo está suspenso,5
+268,Processo Suspenso por Morte ou perda da capacidade,O processo está suspenso. Procure seu advogado.,5
