@@ -26,13 +26,11 @@ datas["results"].each_with_index do |data, index|
     email: data["email"],
     first_name: data["name"]["first"].capitalize,
     last_name: data["name"]["last"].capitalize,
-
     password: "123456",
     password_confirmation: "123456"
   )
   # file = URI.open(data["picture"]["large"])
   # user.photo.attach(io: file, filename: "#{user.username}.png", content_type: 'image/png')
-
   puts "#{index} Users have been created" if index % 5 == 0
 end
 
