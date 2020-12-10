@@ -5,3 +5,31 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+User.destroy_all
+
+response = Net::HTTP.get(URI("https://randomuser.me/api/?results=20"))
+
+datas = JSON.parse(response)
+datas["results"].each_with_index do |data, index|
+  user = User.create(
+    # username: Faker::Internet.username,
+    # email: Faker::Internet.email,
+    # skill: Faker::Nation.language,
+    # first_name: Faker::Name.first_name,
+    # last_name: Faker::Name.last_name,
+    username: data["login"]["username"],
+    email: data["email"],    
+    first_name: data["name"]["first"].capitalize,
+    last_name: data["name"]["last"].capitalize,
+
+    password: "123456",
+    password_confirmation: "123456"
+  )
+  file = URI.open(data["picture"]["large"])
+  user.photo.attach(io: file, filename: "#{user.username}.png", content_type: 'image/png')
+
+  puts "#{index} Users have been created" if index % 5 == 0
+end
+
+puts "All user created!"
