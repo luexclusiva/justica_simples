@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
+Party.destroy_all
+Judicial.destroy_all
+
 
 user = User.create(
   email: 'admin@admin.com',
@@ -57,36 +60,33 @@ CSV.foreach(file, csv_options) do |row|
   )
 end
 
-######### Testing with one judicial ############################################
+######### Importing judicials ############################################
 require "json"
 file = File.read("app/assets/judicials/processo_teste_2.json")
 
 
-judicial = JSON.parse(file)
+data = JSON.parse(file)
+judicials = data["judicials"]
 
-
-new_judicial = Judicial.create(
-  number: judicial["processo"],
-  judicial_type: judicial["classe"]
-)
-
-Party.create(
-  role: "autor",
-  name: judicial["partes"]["autor"],
-  judicial_id: new_judicial.id
-)
-
-Party.create(
- role: "reu",
- name: judicial["partes"]["reu"],
- judicial_id: new_judicial.id
-)
-
-
-judicial["andamento"].each do |row|
-  jd = JudicialStep.create!(
-    step_id: Step.where("cnj_number":row[0])[0].id,
-    date: Date.parse(row[1]),
-    judicial_id: new_judicial.id,
+judicials.each do |jud|
+  new_judicial = Judicial.create!(
+    number: jud["processo"],
+    judicial_type: jud["classe"]
   )
+
+  ["autor", "reu"].each do |role|
+    Party.create!(
+      role: role,
+      name: jud["partes"][role],
+      judicial_id: new_judicial.id
+    )
+  end
+
+  jud["andamento"].each do |step|
+    JudicialStep.create!(
+      step_id: Step.where("cnj_number":step[0])[0].id,
+      date: Date.parse(step[1]),
+      judicial_id: new_judicial.id,
+    )
+  end
 end
