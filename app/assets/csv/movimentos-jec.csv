@@ -26,7 +26,7 @@ Código,Movimento,Relevância (1-5),Proposta de tradução
 268,Processo Suspenso por Morte ou perda da capacidade,5,O processo está suspenso. Procure seu advogado.
 898,Processo Suspenso ou Sobrestado por Por decisão judicial,5,O processo está suspenso
 11009,Proferido despacho,5,O juiz deu andamento ao processo
-12068,Determinado o levantamento da suspensão ou do sobrestamento dos autos,3,O processo não está mais suspenso. 
+12068,Determinado o levantamento da suspensão ou do sobrestamento dos autos,3,O processo não está mais suspenso.
 11010,Proferido despacho de mero expediente,5,O juiz deu andamento ao processo
 11012,Processo Suspenso ou Sobrestado por Conflito de Competência,5,O processo está suspenso
 11013,Processo Suspenso por Convenção das Partes,5,O processo está suspenso
@@ -53,29 +53,29 @@ Código,Movimento,Relevância (1-5),Proposta de tradução
 11404,Julgado procedente em parte o pedido e procedente o pedido contraposto,1,O juiz deu em parte o pedido do autor e tudo do pedido do réu.
 471,Declarada decadência ou prescrição,1,O juiz não deu o pedido porque a parte demorou para entrar na justiça
 455,Homologada renúncia pelo autor,1,O autor da ação desistiu
-218,Julgamento Sem Resolução de Mérito,1,O processo terminou sem o juiz precisar decidir o caso. 
+218,Julgamento Sem Resolução de Mérito,1,O processo terminou sem o juiz precisar decidir o caso.
 11373,Anulada a(o) sentença/acórdão,1,"Decisão cancelada, será julgada de novo. "
-456,Extinto o processo sem resolução do mérito por,1,O processo terminou sem o juiz precisar decidir o caso. 
-458,Extinto o processo por abandono da causa pelo autor,1,O processo terminou sem o juiz precisar decidir o caso. 
-464,Extinto o processo por ser a ação intransmissível,1,O processo terminou sem o juiz precisar decidir o caso. 
-461,Extinto o processo por ausência das condições da ação,1,O processo terminou sem o juiz precisar decidir o caso. 
-11381,Extinto o processo por ausência de citação de sucessores do réu falecido,1,O processo terminou sem o juiz precisar decidir o caso. 
-459,Extinto o processo por ausência de pressupostos processuais,1,O processo terminou sem o juiz precisar decidir o caso. 
-11376,Extinto o processo por ausência do autor à audiência,1,O processo terminou sem o juiz precisar decidir o caso. 
-11380,Extinto o processo por falecimento do autor sem habilitação de sucessores,1,O processo terminou sem o juiz precisar decidir o caso. 
-12298,Extinto o processo pelo cancelamento da dívida ativa,1,O processo terminou sem o juiz precisar decidir o caso. 
-12256,Extinto o processo sem resolução de mérito por continência,1,O processo terminou sem o juiz precisar decidir o caso. 
-462,Extinto o processo por convenção de arbitragem,1,O processo terminou sem o juiz precisar decidir o caso. 
-463,Extinto o processo por desistência,1,O processo terminou sem o juiz precisar decidir o caso. 
-11374,Extinto o processo por devedor não encontrado,1,O processo terminou sem o juiz precisar decidir o caso. 
-11377,Extinto o processo por inadmissibilidade do procedimento sumaríssimo,1,O processo terminou sem o juiz precisar decidir o caso. 
-11379,Extinto o processo por incompetência em razão da pessoa,1,O processo terminou sem o juiz precisar decidir o caso. 
-11378,Extinto o processo por incompetência territorial,1,O processo terminou sem o juiz precisar decidir o caso. 
-454,Indeferida a petição inicial,1,O processo terminou sem o juiz precisar decidir o caso. 
-11375,Extinto o processo por inexistência de bens penhoráveis,1,O processo terminou sem o juiz precisar decidir o caso. 
-457,Extinto o processo por negligência das partes,1,O processo terminou sem o juiz precisar decidir o caso. 
-460,"Extinto o processo por Perempção, litispendência ou coisa julgada",1,O processo terminou sem o juiz precisar decidir o caso. 
-12617,Autos extintos por renúncia,1,O processo terminou sem o juiz precisar decidir o caso. 
+456,Extinto o processo sem resolução do mérito por,1,O processo terminou sem o juiz precisar decidir o caso.
+458,Extinto o processo por abandono da causa pelo autor,1,O processo terminou sem o juiz precisar decidir o caso.
+464,Extinto o processo por ser a ação intransmissível,1,O processo terminou sem o juiz precisar decidir o caso.
+461,Extinto o processo por ausência das condições da ação,1,O processo terminou sem o juiz precisar decidir o caso.
+11381,Extinto o processo por ausência de citação de sucessores do réu falecido,1,O processo terminou sem o juiz precisar decidir o caso.
+459,Extinto o processo por ausência de pressupostos processuais,1,O processo terminou sem o juiz precisar decidir o caso.
+11376,Extinto o processo por ausência do autor à audiência,1,O processo terminou sem o juiz precisar decidir o caso.
+11380,Extinto o processo por falecimento do autor sem habilitação de sucessores,1,O processo terminou sem o juiz precisar decidir o caso.
+12298,Extinto o processo pelo cancelamento da dívida ativa,1,O processo terminou sem o juiz precisar decidir o caso.
+12256,Extinto o processo sem resolução de mérito por continência,1,O processo terminou sem o juiz precisar decidir o caso.
+462,Extinto o processo por convenção de arbitragem,1,O processo terminou sem o juiz precisar decidir o caso.
+463,Extinto o processo por desistência,1,O processo terminou sem o juiz precisar decidir o caso.
+11374,Extinto o processo por devedor não encontrado,1,O processo terminou sem o juiz precisar decidir o caso.
+11377,Extinto o processo por inadmissibilidade do procedimento sumaríssimo,1,O processo terminou sem o juiz precisar decidir o caso.
+11379,Extinto o processo por incompetência em razão da pessoa,1,O processo terminou sem o juiz precisar decidir o caso.
+11378,Extinto o processo por incompetência territorial,1,O processo terminou sem o juiz precisar decidir o caso.
+454,Indeferida a petição inicial,1,O processo terminou sem o juiz precisar decidir o caso.
+11375,Extinto o processo por inexistência de bens penhoráveis,1,O processo terminou sem o juiz precisar decidir o caso.
+457,Extinto o processo por negligência das partes,1,O processo terminou sem o juiz precisar decidir o caso.
+460,"Extinto o processo por Perempção, litispendência ou coisa julgada",1,O processo terminou sem o juiz precisar decidir o caso.
+12617,Autos extintos por renúncia,1,O processo terminou sem o juiz precisar decidir o caso.
 12531,Conciliação frutífera,2,As partes chegaram a um acordo
 12532,Conciliação infrutífera,2,As partes não chegaram a um acordo
 12608,Conciliação parcial,2,As partes chegaram a um acordo parcial
@@ -105,10 +105,14 @@ Código,Movimento,Relevância (1-5),Proposta de tradução
 12265,Expedida/certificada a intimação eletrônica,2,A parte foi avisada sobre uma decisão / passo importante do processo
 12267,Intimado em audiência,2,A parte foi avisada sobre uma decisão / passo importante do processo
 12268,Intimado em Secretaria,2,A parte foi avisada sobre uma decisão / passo importante do processo
-12142,Alterada a parte,2,Uma das partes mudou. 
+12142,Alterada a parte,2,Uma das partes mudou.
 118,Protocolizada Petição,2,Uma das partes se manifestou. Procure seu advogado
 92,Publicado #{ato_publicado} em #{data}.,1,"Um documento foi publicado. Se for a sentença, é a decisão que estava sendo esperada!"
 928,Republicado #{ato_publicado} em #{data}.,2,"Um documento foi republicado. É possível que algum problema tenha acontecido com o anterior. Se for a sentença, é a decisão que estava sendo esperada!"
 848,Transitado em Julgado em #{data},2,Não cabem mais recursos
 106,Mandado devolvido #{resultado},2,O aviso enviado pelo juiz foi #{resultado}
 112,Ofício Devolvido #{resultado},2,O pedido de informações enviado pelo juiz foi {resultado}
+99100,Audiência Conciliação designada,1,A audiência inicial para tentar fazer acordo foi marcada.
+99101,Juntada de Petição de contestação,1,O réu apresentou resposta.
+99103,Audiência Conciliação cancelada,1,A audiência para tentar o acordo foi cancelada.
+99104,Audiência Instrução e Julgamento designada,1,Audiência com o Juiz marcada
