@@ -35,3 +35,58 @@ datas["results"].each_with_index do |data, index|
 end
 
 puts "All user created!"
+
+## Populating Steps table #################################################################
+require 'csv'
+
+file = "app/assets/csv/movimentos-jec.csv"
+
+csv_options = {
+  col_sep: ',',
+  quote_char: '"',
+  headers: :first_row
+}
+
+
+CSV.foreach(file, csv_options) do |row|
+  Step.create(
+    cnj_number: row[0],
+    integer: row[3],
+    description: row[1],
+    translation: row[2]
+  )
+end
+
+######### Testing with one judicial ############################################
+require "json"
+file = File.read("app/assets/judicials/processo_teste_2.json")
+
+
+judicial = JSON.parse(file)
+
+
+new_judicial = Judicial.create(
+  number: judicial["processo"],
+  judicial_type: judicial["classe"]
+)
+
+Party.create(
+  role: "autor",
+  name: judicial["partes"]["autor"],
+  judicial_id: new_judicial.id
+)
+
+Party.create(
+ role: "reu",
+ name: judicial["partes"]["reu"],
+ judicial_id: new_judicial.id
+)
+
+
+judicial["andamento"].each do |row|
+  jd = JudicialStep.create!(
+    step_id: Step.where("cnj_number":row[0])[0].id,
+    date: Date.parse(row[1]),
+    judicial_id: new_judicial.id,
+  )
+end

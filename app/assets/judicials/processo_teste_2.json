@@ -1,0 +1,22 @@
+{
+
+ "processo": "0703471-62.2020.8.07.0017",
+
+  "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
+
+  "partes": {
+    "autor": "HULLY HELEN CONCEICAO ROSARIO OLIVEIRA",
+    "reu": "BANCO DO BRASIL"
+  },
+
+  "andamento": [
+   [118, "21/07/2020", "nil"],
+   [970, "21/07/2020", "09/09/2020 13:30"],
+   [792, "22/07/2020", "nil"],
+   [11009, "23/07/2020", "nil"],
+   [12164, "05/10/2020", "deferimento"],
+   [12164, "19/10/2020", "deferimento"],
+   [11009, "21/10/2020", "nil"],
+   [219, "22/10/2020", "nil"]
+  ]
+}
