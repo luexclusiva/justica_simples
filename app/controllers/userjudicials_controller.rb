@@ -1,2 +1,0 @@
-class UserjudicialsController < ApplicationController
-end
