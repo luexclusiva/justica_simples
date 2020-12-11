@@ -2,10 +2,12 @@ class JudicialsController < ApplicationController
 
   before_action :set_judicial, only: %i[show destroy]
 
-  def index    
+  def index
+
   end
 
-  def show    
+  def show
+    
   end
 
   def new
