@@ -1,13 +1,16 @@
 class JudicialsController < ApplicationController
-
+  skip_before_action :authenticate_user!, only: %i[index show]
   before_action :set_judicial, only: %i[show destroy]
 
   def index
-
+    if params[:query].present?
+      @judicials = Judicial.search_by_parties_name_and_jud_number(params[:query])
+    else
+      @judicials = Judicial.all
+    end
   end
 
   def show
-    
   end
 
   def new
@@ -16,7 +19,6 @@ class JudicialsController < ApplicationController
 
   def load
     # Carregar dados
-
   end
 
   # def create
@@ -43,7 +45,6 @@ class JudicialsController < ApplicationController
   end
 
   def set_judicial
-    @judicial = Judicial.find(params[:id])    
+    @judicial = Judicial.find(params[:id])
   end
-
 end
