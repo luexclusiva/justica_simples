@@ -13,12 +13,14 @@
     <h3>teste h3</h3>
     <p>teste p</p>
   </div>
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-  </div>
-  <% @property = { contact_name: "teste"} %>
-
+  <%= form_tag judicials_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Procure um nome"
+  %>
+  <%= submit_tag "Search", class: "btn btn-primary" %>
+<% end %>
 <div class="cards">
   <div class="card-category">
     Processo XPTO: Na realidade já começou a vida. Deve se procurar um cara muito importante para resolver ela 
