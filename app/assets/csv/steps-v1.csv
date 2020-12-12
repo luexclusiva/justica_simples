@@ -1,0 +1,118 @@
+cnj_number;description;priority;translation;stage
+3;Decisão ou Despacho;1;O juiz decidiu algo;9
+11;Decisão ou Despacho Declaração;5;O processo andou;9
+25;Processo Suspenso ou Sobrestado por;5;O processo está suspenso;9
+26;Distribuído por;2;Processo iniciado;1
+36;Redistribuído por #{tipo_de_distribuicao_redistribuicao} em razão de #{motivo_da_redistribuicao};5;Processo mudou de juiz/vara;1
+51;Conclusos #{tipo_de_conclusao};3;Processo está com o juiz para análise ou decisão;3
+60;Expedição de #{tipo_de_documento}.;2;O Juiz (ou o cartório) expediu #{tipo_de_documento}.;3
+92;Publicado #{ato_publicado} em #{data}.;1;Um documento foi publicado. Se for a sentença, é a decisão que estava sendo esperada!;3
+106;Mandado devolvido #{resultado};2;O aviso enviado pelo juiz foi #{resultado};3
+112;Ofício Devolvido #{resultado};2;O pedido de informações enviado pelo juiz foi {resultado};3
+118;Protocolizada Petição;2;Uma das partes se manifestou. Procure seu advogado;9
+151;Decisão ou Despacho Concessão de efeito suspensivo;4;O pedido de urgência foi dado;9
+193;Julgamento;5;O processo está suspenso;9
+200;Embargos de Declaração Não-acolhidos;3;O juiz recusou o pedido para explicar melhor a decisão;4
+218;Julgamento Sem Resolução de Mérito;1;O processo terminou sem o juiz precisar decidir o caso.;4
+219;Julgado procedente o pedido;1;O juiz deu o pedido;4
+220;Julgado improcedente o pedido;1;O juiz não deu o pedido;4
+221;Julgado procedente em parte do pedido;1;O juiz deu em parte o pedido;4
+245;Arquivado Provisoramente;1;Processo encerrado;4
+246;Arquivado Definitivamente;1;Processo encerrado;4
+268;Processo Suspenso por Morte ou perda da capacidade;5;O processo está suspenso. Procure seu advogado.;9
+270;Processo Suspenso por Convenção das Partes;5;O processo está suspenso;9
+271;Processo Suspenso por Exceção de Incompetência, suspeição ou Impedimento;5;O processo está suspenso;9
+272;Processo Suspenso por depender do julgamento de outra causa, de outro juízo ou declaração incidente;5;O processo está suspenso;9
+275;Processo Suspenso ou Sobrestado por Força maior;5;O processo está suspenso;9
+277;Processo Suspenso ou Sobrestado por Convenção das Partes para Cumprimento Voluntário da obrigação;5;O processo está suspenso;9
+279;Processo Suspenso ou Sobrestado por Incidente de Insanidade Mental;5;O processo está suspenso;9
+332;Concedida a Antecipação de tutela;2;O pedido de urgência foi dado;9
+339;Concedida a Medida Liminar;3;O pedido de urgência foi dado;9
+348;Revogada a Medida Liminar;3;O juiz voltou atrás quanto ao pedido de urgência.;9
+378;Decisão ou Despacho Homologação;1;O acordo foi aceito pelo juiz;4
+385;Julgamento com Resolução de Mérito;1;O processo foi decidido.;4
+454;Indeferida a petição inicial;1;O processo terminou sem o juiz precisar decidir o caso.;4
+455;Homologada renúncia pelo autor;1;O autor da ação desistiu;4
+456;Extinto o processo sem resolução do mérito por;1;O processo terminou sem o juiz precisar decidir o caso.;4
+457;Extinto o processo por negligência das partes;1;O processo terminou sem o juiz precisar decidir o caso.;4
+458;Extinto o processo por abandono da causa pelo autor;1;O processo terminou sem o juiz precisar decidir o caso.;4
+459;Extinto o processo por ausência de pressupostos processuais;1;O processo terminou sem o juiz precisar decidir o caso.;4
+460;Extinto o processo por Perempção, litispendência ou coisa julgada;1;O processo terminou sem o juiz precisar decidir o caso.;4
+461;Extinto o processo por ausência das condições da ação;1;O processo terminou sem o juiz precisar decidir o caso.;4
+462;Extinto o processo por convenção de arbitragem;1;O processo terminou sem o juiz precisar decidir o caso.;4
+463;Extinto o processo por desistência;1;O processo terminou sem o juiz precisar decidir o caso.;4
+464;Extinto o processo por ser a ação intransmissível;1;O processo terminou sem o juiz precisar decidir o caso.;4
+466;Homologada a Transação;1;O acordo foi aceito pelo juiz;4
+471;Declarada decadência ou prescrição;1;O juiz não deu o pedido porque a parte demorou para entrar na justiça;4
+792;Não Concedida a Medida Liminar;3;O pedido de urgência foi negado;
+848;Transitado em Julgado em #{data};2;Não cabem mais recursos;4
+861;Processo Arquivado;1;Processo encerrado;4
+888;Decisão ou Despacho Concessão em parte;2;O pedido de urgência foi dado em parte;9
+892;Concedida em parte a Medida Liminar;2;O pedido de urgência foi dado em parte;9
+898;Processo Suspenso ou Sobrestado por Por decisão judicial;5;O processo está suspenso;4
+928;Republicado #{ato_publicado} em #{data}.;2;Um documento foi republicado. É possível que algum problema tenha acontecido com o anterior. Se for a sentença, é a decisão que estava sendo esperada!;9
+960;Processo Suspenso ou Sobrestado por Conflito de Competência;5;O processo está suspenso;9
+968;Decisão ou Despacho Não-Concessão;2;O pedido de urgência foi negado;9
+970;Audiência #{tipo_de_audiencia} #{situacao_da_audiencia} conduzida por #{dirigida_por} em/para #{data_hora}, #{local}.;1;Foi realizada audiência em {data};9
+11009;Proferido despacho;5;O juiz deu andamento ao processo;9
+11010;Proferido despacho de mero expediente;5;O juiz deu andamento ao processo;9
+11012;Processo Suspenso ou Sobrestado por Conflito de Competência;5;O processo está suspenso;9
+11013;Processo Suspenso por Convenção das Partes;5;O processo está suspenso;9
+11014;Processo Suspenso ou Sobrestado por Convenção das Partes para Cumprimento Voluntário da obrigação;5;O processo está suspenso;9
+11015;Processo Suspenso por Exceção de Incompetência, suspeição ou Impedimento;5;O processo está suspenso;9
+11017;Processo Suspenso ou Sobrestado por Incidente de Insanidade Mental;5;O processo está suspenso;9
+11373;Anulada a(o) sentença/acórdão;1;Decisão cancelada, será julgada de novo.;4
+11374;Extinto o processo por devedor não encontrado;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11375;Extinto o processo por inexistência de bens penhoráveis;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11376;Extinto o processo por ausência do autor à audiência;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11377;Extinto o processo por inadmissibilidade do procedimento sumaríssimo;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11378;Extinto o processo por incompetência territorial;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11379;Extinto o processo por incompetência em razão da pessoa;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11380;Extinto o processo por falecimento do autor sem habilitação de sucessores;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11381;Extinto o processo por ausência de citação de sucessores do réu falecido;1;O processo terminou sem o juiz precisar decidir o caso.;4
+11401;Julgado procedente o pedido e procedente o pedido contraposto;1;O juiz deu o pedido do autor e também o pedido do réu;4
+11402;Julgado procedente o pedido e procedente em parte o pedido contraposto;1;O juiz deu o pedido do autor e também o pedido do réu;4
+11403;Julgado procedente o pedido e improcedente o pedido contraposto;1;O juiz deu o pedido para o autor e não o do réu;4
+11404;Julgado procedente em parte o pedido e procedente o pedido contraposto;1;O juiz deu em parte o pedido do autor e tudo do pedido do réu.;4
+11406;Julgado procedente em parte o pedido e improcedente o pedido contraposto;1;O juiz deu em parte o pedido do autor e não o pedido do réu.;4
+11407;Julgado improcedente o pedido e procedente o pedido contraposto;1;O juiz deu o pedido só para o réu.;4
+11408;Julgado improcedentes o pedido e procedente em parte o pedido contraposto;1;O juiz deu parte do pedido do réu;4
+11409;Julgado improcedentes o pedido e o pedido contraposto;1;O juiz não deu nenhum dos pedidos;4
+11795;Julgado procedente o pedido - reconhecimento pelo réu;1;O juiz deu o pedido;4
+12068;Determinado o levantamento da suspensão ou do sobrestamento dos autos;3;O processo não está mais suspenso.;9
+12142;Alterada a parte;2;Uma das partes mudou.;9
+12164;Proferidas outras decisões não especificadas;2;O juiz decidiu algo;9
+12185;Decisão Interlocutória de Mérito;1;Parte do processo foi decidida;9
+12187;Homologada a decisão do juiz leigo;1;O acordo foi aceito pelo juiz;4
+12198;Deliberado em Sessão;2;O juiz decidiu durante a audiência;4
+12256;Extinto o processo sem resolução de mérito por continência;1;O processo terminou sem o juiz precisar decidir o caso.;4
+12263;Intimação;2;A parte foi avisada sobre uma decisão / passo importante do processo;9
+12264;Intimação eletrônica;2;A parte foi avisada sobre uma decisão / passo importante do processo;9
+12265;Expedida/certificada a intimação eletrônica;2;A parte foi avisada sobre uma decisão / passo importante do processo;9
+12266;Confirmada a intimação eletrônica;2;A parte foi avisada sobre uma decisão / passo importante do processo;9
+12267;Intimado em audiência;2;A parte foi avisada sobre uma decisão / passo importante do processo;9
+12268;Intimado em Secretaria;2;A parte foi avisada sobre uma decisão / passo importante do processo;9
+12272;Deliberado em Sessão - declinada a competência;2;O juiz decidiu durante a audiência;4
+12281;Cominicação eletrônica;3;O réu foi comunicado sobre andamento do processo;9
+12282;Expedida/certificada a comunicação eletrôinica;3;O réu foi comunicado sobre andamento do processo;9
+12283;Confirmada a comunicação eletrônica;3;O réu foi comunicado sobre andamento do processo;9
+12284;Citação;3;O réu foi comunicado do início do processo;1
+12285;Citado em Secretaria/Comparecimento Espontâneo;3;O réu foi comunicado do início do processo;1
+12286;Citação eletrônica;3;O réu foi comunicado do início do processo;1
+12287;Expedida/certificada a citação eletrônica;3;O réu foi comunicado do início do processo;1
+12288;Confirmada a citação eletrônica;3;O réu foi comunicado do início do processo;1
+12298;Extinto o processo pelo cancelamento da dívida ativa;1;O processo terminou sem o juiz precisar decidir o caso.;4
+12307;Decretada a revelia;3;O réu não apresentou defesa;3
+12444;Deferido o pedido de #{nome_da_parte}.;2;O pedido de #{nome} foi dado;9
+12477;Não homologado;1;O acordo não foi aceito pelo juiz;3
+12531;Conciliação frutífera;2;As partes chegaram a um acordo;4
+12532;Conciliação infrutífera;2;As partes não chegaram a um acordo;2
+12534;Conciliação infrutífera;2;As partes não chegaram a um acordo;2
+12608;Conciliação parcial;2;As partes chegaram a um acordo parcial;2
+12609;Conciliação parcialmente frutífera;2;As partes chegaram a um acordo parcial;2
+12615;Realizada a Composição Civil;3;As partes realizaram um acordo;4
+12617;Autos extintos por renúncia;1;O processo terminou sem o juiz precisar decidir o caso.;4
+99100;Audiência Conciliação designada;1;A audiência inicial para tentar fazer acordo foi marcada.;2
+99101;Juntada de Petição de contestação;1;O réu apresentou resposta;3
+99103;Audiência Conciliação cancelada;1;A audiência para tentar o acordo foi cancelada.;2
+99104;Audiência Instrução e Julgamento designada;1;Audiência com o Juiz marcada;4
