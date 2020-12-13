@@ -21,11 +21,15 @@
       </p>
     </div>
     <% if jud_step.step.priority == 1  %>
-    <a href="" data-target="#exampleModal" data-toggle="modal">
-      <p><strong><%= jud_step.step.translation %></strong></p>
+    <a href="" data-target="#seconddecisionModal" data-toggle="modal" data-decision-path="app/assets/decisoes/20200705-0700.csv">
+      <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
+    </a>
+    <% elsif jud_step.step.cnj_number == "792" %>
+    <a href="" data-target="#decisionModal" data-toggle="modal" data-decision-path="app/assets/decisoes/20200705-0700.csv">
+      <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
     </a>
     <% else %>
-      <p><strong><%= jud_step.step.translation %></strong></p>
+      <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
     <% end %>
   </div>
   <% end %>

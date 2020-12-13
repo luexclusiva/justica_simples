@@ -85,7 +85,8 @@ judicials.each do |jud|
     JudicialStep.create!(
       step_id: Step.where("cnj_number": step[0])[0].id,
       date: Date.parse(step[1]),
-      judicial_id: new_judicial.id
+      judicial_id: new_judicial.id,
+      complement: step[2]
     )
   end
 end

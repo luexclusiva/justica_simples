@@ -20,7 +20,6 @@ class JudicialsController < ApplicationController
     @phase = nil
     @judicial.judicial_steps.reverse.each do |jud_step|
       unless jud_step.step.stage == 9
-
         @phase = phases[jud_step.step.stage - 1]
         break
       end

@@ -44,7 +44,7 @@
 464;Extinto o processo por ser a ação intransmissível;1;O processo terminou sem o juiz precisar decidir o caso.;4
 466;Homologada a Transação;1;O acordo proposto pelas partes foi aceito pelo juiz;4
 471;Declarada decadência ou prescrição;1;O juiz não deu o pedido porque a parte demorou para entrar na justiça;4
-792;Não Concedida a Medida Liminar;1;O pedido de urgência foi negado;
+792;Não Concedida a Medida Liminar;1;O pedido de urgência foi negado;1
 848;Transitado em Julgado em #{data};5;Não cabem mais recursos;4
 861;Processo Arquivado;5;Processo encerrado;4
 888;Decisão ou Despacho Concessão em parte;1;O pedido de urgência foi dado em parte;9
