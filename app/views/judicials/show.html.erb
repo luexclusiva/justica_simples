@@ -1,9 +1,21 @@
-<div class="container"></div>
-  <div class="cards">
-    <div class="card-category">
-      Processo Xxxx: 
-      
-      <p class="notification"><i class="attention fas fa-exclamation-triangle"></i></p >
+<div class="container">
+  <div class="card border-dark mb-3 mt-3">
+    <div class="card-body text-dark">
+      <h5 class="card-title"><%= @judicial.number %></h5>
+      <p class="card-text">Classe: <%= @judicial.judicial_type %></p>
     </div>
   </div>
+
+  <%= render partial: "shared/table_steps", locals: { judicial: @judicial } %>
+
+  <div class="d-flex justify-content-center">
+    <% if current_user %>      
+      <!-- Criar rota de cadastro de processo (myjudicials?) e colocar no link
+        Ex: userjudicials_path(@judicial) -->
+      <%= link_to 'Salvar processso',  class: "btn btn-primary"%>
+    <% else %>
+      <%= link_to 'Me cadastrar', new_user_registration_path, class: "btn btn-primary" %>
+    <% end %>
+  </div>
+
 </div>
