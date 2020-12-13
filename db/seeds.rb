@@ -9,6 +9,7 @@
 User.destroy_all
 Party.destroy_all
 Judicial.destroy_all
+Step.destroy_all
 
 user = User.create(
   email: 'admin@admin.com',
@@ -41,7 +42,7 @@ puts "All user created!"
 ## Populating Steps table #################################################################
 require 'csv'
 
-file = "app/assets/csv/steps-v1.csv"
+file = "app/assets/csv/steps-v2.csv"
 
 csv_options = {
   col_sep: ';',

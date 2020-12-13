@@ -11,6 +11,20 @@ class JudicialsController < ApplicationController
   end
 
   def show
+    phases = [
+      ["fase de apresentar os pedidos.", 0],
+      ["fase de tentar entrar em acordo.", 1],
+      ["fase de apresentar as provas.", 2],
+      ["fase de decisão.",3]
+    ]
+    @phase = nil
+    @judicial.judicial_steps.reverse.each do |jud_step|
+      unless jud_step.step.stage == 9
+
+        @phase = phases[jud_step.step.stage - 1]
+        break
+      end
+    end
   end
 
   def new

@@ -1,0 +1,39 @@
+<div class="tab-pane fade show  active box_fora col-sm-12 col-md-6 offset-md-3" id="judicial" role="tabpanel" aria-labelledby="judicial-tab">
+  <div>
+    <div class="card mt-5 mb-3">
+      <h5 class="mt-2 pb-2 pl-3 pt-2"><%= @judicial.number %></h5>
+      <div class="mb-2 pl-2">
+        <% @judicial.parties.each_with_index do |party| %>
+          <p class="judicial-parties"><%= "#{(party.role).capitalize}: #{party.name}" %></p>
+        <% end %>
+      </div>
+    </div>
+    <div class=" card judicial-last-step mb-3 pt-3 pl-4">
+      <div>
+        <a href="#" data-target="#exampleModal" data-toggle="modal">
+          <p>Último andamento</p>
+          <h4 class="mb-3">
+            <%= @judicial.judicial_steps.last.step.translation %>
+          </h4>
+        </a>
+      </div>
+    </div>
+    <div class=" card judicial-original mb-3 pt-3 pl-4">
+      <div>
+        <p>Andamento original:</p>
+        <p class="mb-3">
+            <%= @judicial.judicial_steps.last.step.description %>
+        </p>
+      </div>
+    </div>
+    <div class=" card judicial-phase pt-3 pl-4">
+      <div>
+        <a class="nav-link" data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
+          <h5 class="mb-3">
+            <%= "O processo encontra-se na #{@phase[0]}" %>
+          </h5>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

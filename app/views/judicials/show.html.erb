@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="mt-4 tabs-judicial col-sm-12 col-md-6 offset-md-3">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab"  data-toggle="tab" href="#judicial" role="tab" aria-controls="home" aria-selected="true">Processo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="andamento-tab" data-toggle="tab" href="#andamento" role="tab" aria-controls="andamento" aria-selected="false">Andamento</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="fluxo-tab" data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">Fluxo</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="myTabContent">
+    <%= render partial: "judicial" %>
+    <%= render partial: "steps" %>
+    <%= render partial: "fluxogram" %>
+  </div>
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Decisão</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render file: "app/assets/decisoes/20200705-0700.csv", layout: false, content_type: 'text/plain' %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</div>
