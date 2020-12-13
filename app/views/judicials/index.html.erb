@@ -1,0 +1,7 @@
+
+<% @judicials.each do |judicial| %>
+  <%= judicial.number %>
+  <% judicial.parties.each do |party| %>
+    <%= party.name %>
+  <% end %>
+<% end %>

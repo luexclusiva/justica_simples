@@ -10,7 +10,6 @@ User.destroy_all
 Party.destroy_all
 Judicial.destroy_all
 
-
 user = User.create(
   email: 'admin@admin.com',
   first_name: 'Admin',
@@ -42,28 +41,27 @@ puts "All user created!"
 ## Populating Steps table #################################################################
 require 'csv'
 
-file = "app/assets/csv/movimentos-jec.csv"
+file = "app/assets/csv/steps-v1.csv"
 
 csv_options = {
-  col_sep: ',',
+  col_sep: ';',
   quote_char: '"',
   headers: :first_row
 }
 
-
 CSV.foreach(file, csv_options) do |row|
   Step.create(
     cnj_number: row[0],
-    integer: row[3],
     description: row[1],
-    translation: row[2]
+    priority: row[2],
+    translation: row[3],
+    stage: row[4]
   )
 end
 
 ######### Importing judicials ############################################
 require "json"
 file = File.read("app/assets/judicials/processo_teste_2.json")
-
 
 data = JSON.parse(file)
 judicials = data["judicials"]
@@ -84,9 +82,9 @@ judicials.each do |jud|
 
   jud["andamento"].each do |step|
     JudicialStep.create!(
-      step_id: Step.where("cnj_number":step[0])[0].id,
+      step_id: Step.where("cnj_number": step[0])[0].id,
       date: Date.parse(step[1]),
-      judicial_id: new_judicial.id,
+      judicial_id: new_judicial.id
     )
   end
 end
