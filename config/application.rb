@@ -16,7 +16,7 @@ module JusticaSimples
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    # configuração da localização para o pt-br - i18n
+    # configuracao da localizacao para o pt-br - i18n
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
     config.i18n.default_locale = :"pt-BR"
 
