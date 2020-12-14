@@ -1,15 +1,25 @@
 <div class="container">
-  <h2 class="col-sm-12 col-md-4 offset-md-3 my-3 color-white">Seus processos salvos</h2>
+  <h2 class="col-sm-12 col-md-4 offset-md-3 my-3 color-white">Processos que você acompanha</h2>
   <% @user_judicials.each do |userjud| %>
 
-    <%=link_to judicial_path(userjud.judicial), class:"card col-sm-12 col-md-5 offset-md-3 mt-3 px-2 py-3" do %>
-      <div class="my-3 ml-3">
-        <h5><strong><%= userjud.judicial.number %> </strong></h5>
-        <% userjud.judicial.parties.each do |party| %>
+    <div class="card col-sm-12 col-md-5 offset-md-3 mt-3 px-2 py-3">
+      <div class="my-3 ml-3 d-flex justify-content-between">
+        <%=link_to judicial_path(userjud.judicial) do %>
+          <h5> <strong><%= userjud.judicial.number %> </strong></h5>
+          <% userjud.judicial.parties.each do |party| %>
           <p class="judicial-parties"><%= party.name %></p>
+          <% end %>
+        <% end %>
+        <%= link_to user_judicial_path(userjud.id),
+                    method: :delete, 
+                    data: { confirm: "Quer parar de acompanhar?" } do %>
+          <i class="far fa-eye-slash fa-3x"></i>
+          
         <% end %>
       </div>
-    <% end %>
+    </div>
+      
+    
 
   <% end %>
 </div>
