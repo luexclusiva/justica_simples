@@ -27,6 +27,8 @@ class JudicialsController < ApplicationController
     end
   end
 
+  def teste; end
+
   def new
     @judicial = Judicials.new
   end

@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :judicials, only: %i[index show]
   resources :user_judicials, only: %i[create destroy index]
+
+  get '/teste', to: 'judicials#teste'
 end
