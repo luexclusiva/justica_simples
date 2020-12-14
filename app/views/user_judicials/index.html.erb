@@ -1,12 +1,15 @@
 <div class="container">
   <h2 class="col-sm-12 col-md-4 offset-md-3 my-3 color-white">Seus processos salvos</h2>
   <% @user_judicials.each do |userjud| %>
-  <div class="card col-sm-12 col-md-5 offset-md-3 mt-3 px-2 py-3">
-     <p><strong><%= userjud.judicial.number %></strong></p>
-     <% userjud.judicial.parties.each do |party| %>
-       <p><%= (party.role).capitalize %>: <%= party.name %></p>
-     <% end %>
 
-  </div>
+    <%=link_to judicial_path(userjud.judicial), class:"card col-sm-12 col-md-5 offset-md-3 mt-3 px-2 py-3" do %>
+      <div class="my-3 ml-3">
+        <h5><strong><%= userjud.judicial.number %> </strong></h5>
+        <% userjud.judicial.parties.each do |party| %>
+          <p class="judicial-parties"><%= party.name %></p>
+        <% end %>
+      </div>
+    <% end %>
+
   <% end %>
 </div>
