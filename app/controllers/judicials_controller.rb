@@ -11,6 +11,7 @@ class JudicialsController < ApplicationController
   end
 
   def show
+    @userjudicial = UserJudicial.new
     phases = [
       ["fase de apresentar os pedidos.", 0],
       ["fase de tentar entrar em acordo.", 1],
