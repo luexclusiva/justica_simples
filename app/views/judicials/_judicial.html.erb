@@ -45,7 +45,7 @@
   <hr>
   <% if current_user %>
     <div class="mx-auto">
-      <%= simple_form_for @userjudicial, remote: true do |f| %>
+      <%= simple_form_for @userjudicial do |f| %>
       <div hidden>
         <%= f.input :judicial_id, input_html: { value: @judicial.id } %>
       </div>

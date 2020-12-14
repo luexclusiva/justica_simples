@@ -16,7 +16,7 @@ class JudicialsController < ApplicationController
       ["fase de apresentar os pedidos.", 0],
       ["fase de tentar entrar em acordo.", 1],
       ["fase de apresentar as provas.", 2],
-      ["fase de decisão.",3]
+      ["fase de decisão.", 3]
     ]
     @phase = nil
     @judicial.judicial_steps.reverse.each do |jud_step|
