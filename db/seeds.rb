@@ -9,6 +9,7 @@
 User.destroy_all
 Party.destroy_all
 Judicial.destroy_all
+Step.destroy_all
 
 user = User.create(
   email: 'admin@admin.com',
@@ -41,7 +42,7 @@ puts "All user created!"
 ## Populating Steps table #################################################################
 require 'csv'
 
-file = "app/assets/csv/steps-v1.csv"
+file = "app/assets/csv/steps-v2.csv"
 
 csv_options = {
   col_sep: ';',
@@ -84,7 +85,8 @@ judicials.each do |jud|
     JudicialStep.create!(
       step_id: Step.where("cnj_number": step[0])[0].id,
       date: Date.parse(step[1]),
-      judicial_id: new_judicial.id
+      judicial_id: new_judicial.id,
+      complement: step[2]
     )
   end
 end

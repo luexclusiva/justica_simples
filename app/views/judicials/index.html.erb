@@ -1,7 +1,12 @@
-
-<% @judicials.each do |judicial| %>
-  <%= judicial.number %>
-  <% judicial.parties.each do |party| %>
-    <%= party.name %>
+<div class="container jud-index">
+  <% @judicials.each do |judicial| %>
+    <%=link_to judicial_path(judicial), class:"card mt-2 ml-2 col-sm-12 col-md-5" do %>
+      <div class="my-3 ml-3">
+        <h5><strong><%= judicial.number %> </strong></h5>
+        <% judicial.parties.each do |party| %>
+        <p class="judicial-parties"><%= party.name %></p>
+        <% end %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+</div>

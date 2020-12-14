@@ -1,0 +1,36 @@
+<div class="tab-pane fade col-sm-12 col-md-6 offset-md-3" id="andamento" role="tabpanel" aria-labelledby="andamento-tab">
+  <div class=" steps-title my-3 mx-2">
+    <h4 class="judicials-steps-title pb-2 pl-3 pt-2 mt-2"> Andamentos do processo</h4>
+  </div>
+  <% @judicial.judicial_steps.reverse.each do |jud_step| %>
+  <div class="card d-flex pb-1 pl-3 pt-2 mb-3 mx-1">
+    <div class="card-step-header d-flex justify-content-between pr-3">
+      <p><%= jud_step.date.strftime("%d.%m.%Y") %></p>
+      <p class="avatar-stage">
+        <% if jud_step.step.priority == 1 %>
+          <i class="fas fa-gavel"></i>
+        <% elsif jud_step.step.priority == 2  %>
+          <i class="fas fa-user-friends"></i>
+        <% elsif jud_step.step.priority == 3  %>
+          <i class="fas fa-calendar-alt"></i>
+        <% elsif jud_step.step.priority == 4  %>
+          <i class="fas fa-handshake"></i>
+        <% else %>
+          <i class="fas fa-balance-scale"></i>
+        <% end %>
+      </p>
+    </div>
+    <% if jud_step.step.cnj_number == "792"  %>
+    <a href="" data-target="#seconddecisionModal" data-toggle="modal" data-decision-path="app/assets/decisoes/20200705-0700.csv">
+      <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
+    </a>
+    <% elsif jud_step.step.priority == 1  %>
+    <a href="" data-target="#decisionModal" data-toggle="modal" data-decision-path="app/assets/decisoes/20200705-0700.csv">
+      <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
+    </a>
+    <% else %>
+      <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
+    <% end %>
+  </div>
+  <% end %>
+</div>

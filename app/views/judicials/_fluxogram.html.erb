@@ -1,0 +1,37 @@
+<div class="tab-pane fade" id="fluxograma" role="tabpanel" aria-labelledby="proposals-tab">
+  <div class="fluxogram col-sm-12 col-md-6 offset-md-3">
+
+
+      <div class="petitoria mt-3 <%= @phase[1] == 0 ? "phase-yellow" : "phase-grey" %>">
+        <p class="pt-4">
+          Fase de Apresentação dos pedidos e justificativas
+        </p>
+      </div>
+
+      <div id="pointer" class="my-2"></div>
+
+      <div class="conciliatoria mt-4 <%= if @phase[1] == 1 then "phase-yellow" elsif @phase[1] > 1 then "phase-grey" end %>">
+        <p class="pt-4">
+          Fase de tentativa de acordo
+        </p>
+      </div>
+
+      <div id="pointer" class="my-2"></div>
+
+      <div class="provas mt-4 <%= if @phase[1] == 2 then "phase-yellow" elsif @phase[1] > 2 then "phase-grey" end %>">
+        <p class="pt-4">
+          Fase de apresentação de provas
+        </p>
+      </div>
+
+      <div id="pointer" class="my-2"></div>
+
+
+      <div class="decisoria mt-4 <%= "phase-yellow" if @phase[1] == 3 %>">
+        <p class="">
+          Fase de decisão do processo
+        </p>
+      </div>
+
+  </div>
+</div>
