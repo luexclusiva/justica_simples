@@ -10,15 +10,14 @@
   </div>
   <div class=" card judicial-last-step mb-3 pt-3 pl-4">
     <div>
-      <% if @judicial.judicial_steps.last.step.priority == 1 %>
-      <a href="#" data-target="#decisionModal" data-toggle="modal">
-        <p>Último andamento</p>
+      <p>Último andamento</p>
+      <% unless @judicial.judicial_steps.last.decision == "0" %>
+      <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
         <h4 class="mb-3">
           <%= @judicial.judicial_steps.last.step.translation %>
         </h4>
       </a>
       <% else %>
-      <p>Último andamento</p>
       <h4 class="mb-3">
         <%= @judicial.judicial_steps.last.step.translation %>
       </h4>

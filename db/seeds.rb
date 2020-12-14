@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+UserJudicial.destroy_all
 User.destroy_all
 Party.destroy_all
 Judicial.destroy_all
@@ -73,12 +74,14 @@ judicials.each do |jud|
     judicial_type: jud["classe"]
   )
 
-  ["autor", "reu"].each do |role|
-    Party.create!(
-      role: role,
-      name: jud["partes"][role],
-      judicial_id: new_judicial.id
-    )
+  jud["partes"].each do |key, value|
+    value.each do |name|
+      Party.create!(
+        role: key,
+        name: name,
+        judicial_id: new_judicial.id
+      )
+    end
   end
 
   jud["andamento"].each do |step|
@@ -86,7 +89,9 @@ judicials.each do |jud|
       step_id: Step.where("cnj_number": step[0])[0].id,
       date: Date.parse(step[1]),
       judicial_id: new_judicial.id,
-      complement: step[2]
+      complement: step[2],
+      decision: (step[3] unless step[3] == "0")
+
     )
   end
 end
