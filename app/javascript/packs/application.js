@@ -24,8 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import modalDecision from "../lib/decisionModal"
-import typed from "../lib/typed"
+import { modalDecision } from "../lib/decisionModal"
+import { initTyped } from "../lib/init_typed"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,16 +35,8 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   // modalDecision();
 
-  const decisionModal = document.getElementById("decisionModal")
-  if (decisionModal) {
-    document.querySelectorAll(".stepModal").forEach((modalLink) => {
-      modalLink.addEventListener("click", (event) => {
-        decisionModal.querySelector(".modal-body").innerText = modalLink.dataset.decisionText;
-      })
-    })
+    modalDecision();
 
-    typed();
+    initTyped();
   }
-
-
-});
+);

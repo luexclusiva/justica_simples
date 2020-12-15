@@ -18,6 +18,10 @@ class UserJudicialsController < ApplicationController
   def destroy
     set_user_judicial
     @userjudicial.destroy
+    
+
+    redirect_to root_path
+
   end
 end
 
