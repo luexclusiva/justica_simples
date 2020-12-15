@@ -6,20 +6,27 @@
 // General style
 $font-family-sans-serif:  $body-font;
 $headings-font-family:    $headers-font;
-$body-bg:                 $white;
+$body-bg:                 $paleta_amarelo;
 $font-size-base: 1rem;
 
 // Colors
-$body-color: $custom_font_dark_green;
-$primary:    $custom2;
-$success:    $custom1;
-$info:       $black;
-$danger:     $gray;
-$warning:    $orange;
+$body-color: $custom2;
+$primary:    $paleta_azul_escuro;
+$success:    $paleta_azul_claro;
+$info:       $paleta_amarelo_claro;
+$danger:     $paleta_laranja;
+$warning:    $paleta_amarelo;
 
 // Buttons & inputs' radius
 $border-radius:    16px;
 $border-radius-lg: 16px;
 $border-radius-sm: 16px;
+
+// $paleta_amarelo_claro: #fcf8ec;
+// $paleta_azul_claro: #d0e8f2;
+// $paleta_azul_normal: #79a3b1;
+// $paleta_azul_escuro: #456268;
+// $paleta_amarelo: #E9C46A;
+// $paleta_laranja: #F4A261;
 
 // Override other variables below!

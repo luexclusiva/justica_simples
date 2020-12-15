@@ -1,5 +1,4 @@
 class UserJudicialsController < ApplicationController
-
   def index
     @user_judicials = UserJudicial.where(user_id: current_user.id)
   end
@@ -10,11 +9,18 @@ class UserJudicialsController < ApplicationController
     user_judicial.judicial_id = params[:user_judicial][:judicial_id]
 
     if user_judicial.save
-      flash[:alert] = "O processo foi salvo"
+      flash[:alert] = "O processo foi incluído em 'Meus processos' para acompanhamento"
+      # redirect_to user_judicials_path
+      redirect_to judicial_path(user_judicial.judicial_id)
     end
-
-
   end
 
+  def destroy
+    set_user_judicial
+    @userjudicial.destroy
+  end
+end
 
+def set_user_judicial
+  @userjudicial = UserJudicial.find(params[:id])
 end
