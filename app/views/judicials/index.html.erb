@@ -1,7 +1,7 @@
 <div class="container jud-index">
   <% if @judicials.length.positive? %>
     <% @judicials.each do |judicial| %>
-      <%=link_to judicial_path(judicial), class:"card mt-2 ml-2 col-sm-12 col-md-5" do %>
+      <%=link_to judicial_path(judicial), class:"card card-judicial mt-3 ml-2 col-sm-12 col-md-5 mx-auto" do %>
         <div class="my-3 ml-3">
           <h5><strong><%= judicial.number %> </strong></h5>
           <% judicial.parties.each do |party| %>
@@ -14,7 +14,7 @@
     <div class="text-center mt-5">
       <h3>Não foi encontrado nenhum processo!</h3>
       <p>Verifique se escreveu o nome ou o número do processo corretamente</p>
-      
+
       <%= link_to root_path do %>
         <p>voltar</p>
       <% end %>
