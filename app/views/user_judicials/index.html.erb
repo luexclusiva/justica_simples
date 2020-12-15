@@ -1,5 +1,10 @@
 <div class="container">
-  <h2 class="col-sm-12 col-md-4 offset-md-3 my-3 color-white">Processos que você acompanha</h2>
+  <% if @user_judicials[0].nil? %>
+    <h5 class="col-sm-12 col-md-4 offset-md-3 my-3">Você não possui processos para acompanhamento.</h5>
+  <% else %>
+    <h3 class="col-sm-12 col-md-4 offset-md-3 my-3">Processos que acompanho <%#= "#{@user_judicials.id}" %></h3>
+  <% end %>
+
   <% @user_judicials.each do |userjud| %>
 
     <div class="card col-sm-12 col-md-5 offset-md-3 mt-3 px-2 py-3">
