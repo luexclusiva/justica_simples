@@ -12,11 +12,11 @@
     <div>
       <p>Último andamento</p>
       <% unless @judicial.judicial_steps.last.decision == "0" %>
-      <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
-        <h4 class="mb-3">
-          <%= @judicial.judicial_steps.last.step.translation %>
-        </h4>
-      </a>
+        <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
+          <h4 class="mb-3">
+            <%= @judicial.judicial_steps.last.step.translation %>
+          </h4>
+        </a>
       <% else %>
       <h4 class="mb-3">
         <%= @judicial.judicial_steps.last.step.translation %>
