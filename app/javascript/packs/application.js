@@ -24,8 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import modalDecision from "../lib/decisionModal"
-import typed from "../lib/typed"
+import { modalDecision } from "../lib/decisionModal";
+import { typed } from "../lib/typed";
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
