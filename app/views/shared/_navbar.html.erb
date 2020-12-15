@@ -13,7 +13,7 @@
 
       <% unless current_page?(user_judicials_path(current_user)) %>
         <li class="nav-item">
-          <%= link_to "Meus processos", user_judicials_path(current_user), class: "nav-link link-navbar" %>
+          <%= link_to "Meus processos", user_judicials_path, class: "nav-link link-navbar" %>
         </li>
       <% end %>
 

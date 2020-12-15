@@ -15,16 +15,16 @@
           <p class="judicial-parties"><%= party.name %></p>
           <% end %>
         <% end %>
-        <%= link_to user_judicial_path(userjud.id),
-                    method: :delete, 
+        <%= link_to user_judicial_path(userjud),
+                    method: :delete,
                     data: { confirm: "Quer parar de acompanhar?" } do %>
           <i class="far fa-trash-alt fa-2x"></i>
-          
+
         <% end %>
       </div>
     </div>
-      
-    
+
+
 
   <% end %>
 </div>
