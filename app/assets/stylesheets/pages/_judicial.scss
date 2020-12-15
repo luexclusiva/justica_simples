@@ -7,7 +7,7 @@
 }
 
 .judicials-steps-title {
-  color: white;
+  color: $custom_font_dark_green;
 }
 
 .judicial-original{
@@ -34,15 +34,13 @@
 .petitoria {
   width: 240px;
   height: 120px;
-  background: white;
-  border-radius: 100px / 50px;
+  // border-radius: 100px / 50px;
   margin: auto;
 }
 
 .conciliatoria {
   width: 200px;
   height: 100px;
-  background: white;
   border-radius: 5px;
   margin: auto;
 }
@@ -50,38 +48,62 @@
 .provas {
   width: 200px;
   height: 100px;
-  background: white;
   border-radius: 5px;
   margin: auto;
 }
 
 .decisoria {
   width: 200px;
-  height: 200px;
-  background: white;
-  border-radius: 50%;
+  height: 120px;
+  background: $light-gray;
+  // border-radius: 50%;
   margin: auto;
-
+  box-shadow: 0px 0px 4px rgba(1,1,1,0.2);
+  text-shadow: 0px 0px 4px rgba(1,1,1,0.2);
+  margin-bottom: 0;
   p{
     padding-top: 70px;
   }
 }
 
 #pointer {
-  width: 10px;
-  height: 50px;
+  width: 22px;
+  height: 20px;
   position: relative;
   background: black;
   margin: auto;
+  margin-top: -10px;
 
   &:before{
     content: "";
     position: absolute;
-    right: -15px;
-    bottom: -10px;
-    width: 0;
-    height: 0;
+    right: -9.5px;
+    bottom: -11px;
+    width: 41px;
+    height: 10px;
     border-top: 20px solid black;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+}
+
+#atual_pointer {
+  width: 22px;
+  height: 20px;
+  position: relative;
+  background: $paleta_laranja;
+  margin: auto;
+  margin-top: -10px;
+
+  &:before{
+    content: "";
+    position: absolute;
+    right: -9.5px;
+    bottom: -11px;
+    width: 41px;
+    height: 10px;
+
+    border-top: 20px solid  $paleta_laranja;
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
   }
@@ -90,11 +112,15 @@
 .phase-grey {
   background-color: #80808047;
   color:white;
+  text-shadow: 0px 0px 2px rgba(1,1,1,0.5);
+  box-shadow: 0px 0px 4px rgba(1,1,1,0.2);
 }
 
 .phase-yellow{
   background-color: #eae4009e;
   color:white;
+  text-shadow: 0px 0px 2px rgba(1,1,1,0.5);
+  box-shadow: 0px 0px 4px rgba(1,1,1,0.2);
 }
 
 a{

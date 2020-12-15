@@ -45,16 +45,18 @@
 
   <hr>
   <% if current_user %>
-    <div class="mx-auto">
-      <%= simple_form_for @userjudicial do |f| %>
-      <div hidden>
-        <%= f.input :judicial_id, input_html: { value: @judicial.id } %>
-      </div>
+    <% if UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).empty? %>
+      <div class="mx-auto">
+        <%= simple_form_for @userjudicial do |f| %>
+        <div hidden>
+          <%= f.input :judicial_id, input_html: { value: @judicial.id } %>
+        </div>
         <%= f.button :submit, "Acompanhar", class:"btn btn-ghost pl-3 pr-3" %>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% end %>
   <% else %>
-    <%= link_to "Para salvar esse processo faça o login", new_user_session_path %>
+    <%= link_to "Para acompanhar esse processo faça o login", new_user_session_path %>
   <% end %>
 
 </div>
