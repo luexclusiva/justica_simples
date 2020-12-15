@@ -7,7 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
-
+require("../../../vendor/assets/dist/js/dsgov")
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -24,8 +24,8 @@ require("channels")
 
 // External imports
 import "bootstrap";
-import { modalDecision } from "../lib/decisionModal";
-import { typed } from "../lib/typed";
+import { modalDecision } from "../lib/decisionModal"
+import { initTyped } from "../lib/init_typed"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -35,16 +35,8 @@ document.addEventListener('turbolinks:load', () => {
   // initSelect2();
   // modalDecision();
 
-  const decisionModal = document.getElementById("decisionModal")
-  if (decisionModal) {
-    document.querySelectorAll(".stepModal").forEach((modalLink) => {
-      modalLink.addEventListener("click", (event) => {
-        decisionModal.querySelector(".modal-body").innerText = modalLink.dataset.decisionText;
-      })
-    })
+    modalDecision();
 
-    typed();
+    initTyped();
   }
-
-
-});
+);
