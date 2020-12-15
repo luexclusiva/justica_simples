@@ -10,6 +10,5 @@ var options = {
   startDelay: 20
   };
 
-var typed = new Typed('.typed', options);
+export const typed = new Typed('.typed', options);
 
-export { typed }
