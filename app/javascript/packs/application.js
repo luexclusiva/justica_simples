@@ -25,6 +25,7 @@ require("../../../vendor/assets/dist/js/dsgov")
 // External imports
 import "bootstrap";
 import modalDecision from "../lib/decisionModal"
+import typed from "../lib/typed"
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -41,6 +42,8 @@ document.addEventListener('turbolinks:load', () => {
         decisionModal.querySelector(".modal-body").innerText = modalLink.dataset.decisionText;
       })
     })
+
+    typed();
   }
 
 
