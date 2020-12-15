@@ -1,0 +1,110 @@
+.bg{
+  background-color: #415c6b;
+}
+
+.judicial-parties{
+  margin-bottom: 0px;
+}
+
+.judicials-steps-title {
+  color: white;
+}
+
+.judicial-original{
+  color: #636465;
+
+  p{
+    margin-bottom: 5px;
+  }
+}
+
+.nav-item > a{
+  color: white;
+}
+
+.fluxogram  {
+  color: black;
+
+  p{
+    text-align: center
+  }
+
+}
+
+.petitoria {
+  width: 240px;
+  height: 120px;
+  background: white;
+  border-radius: 100px / 50px;
+  margin: auto;
+}
+
+.conciliatoria {
+  width: 200px;
+  height: 100px;
+  background: white;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.provas {
+  width: 200px;
+  height: 100px;
+  background: white;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.decisoria {
+  width: 200px;
+  height: 200px;
+  background: white;
+  border-radius: 50%;
+  margin: auto;
+
+  p{
+    padding-top: 70px;
+  }
+}
+
+#pointer {
+  width: 10px;
+  height: 50px;
+  position: relative;
+  background: black;
+  margin: auto;
+
+  &:before{
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: -10px;
+    width: 0;
+    height: 0;
+    border-top: 20px solid black;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+  }
+}
+
+.phase-grey {
+  background-color: #80808047;
+  color:white;
+}
+
+.phase-yellow{
+  background-color: #eae4009e;
+  color:white;
+}
+
+a{
+  color: $paleta_azul_escuro;
+}
+
+a:hover {
+  color: $paleta_azul_normal;
+}
+
+ul.square {
+  list-style-type: square;
+}

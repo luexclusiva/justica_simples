@@ -14,7 +14,7 @@ cnj_number;description;priority;translation;stage
 193;Julgamento;5;O processo está suspenso;9
 200;Embargos de Declaração Não-acolhidos;3;O juiz recusou o pedido para explicar melhor a decisão;4
 218;Julgamento Sem Resolução de Mérito;1;O processo terminou sem o juiz precisar decidir o caso.;4
-219;Julgado procedente o pedido;1;O juiz deu o pedido;4
+219;Julgado procedente o pedido;1;O processo foi julgado e o juiz deu o pedido do autor;4
 220;Julgado improcedente o pedido;1;O juiz não deu o pedido;4
 221;Julgado procedente em parte do pedido;1;O juiz deu em parte o pedido;4
 245;Arquivado Provisoramente;1;Processo encerrado;4

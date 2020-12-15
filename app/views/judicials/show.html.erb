@@ -1,23 +1,41 @@
 <div class="container">
-  <div class="card border-dark mb-3 mt-3">
-    <div class="card-body text-dark">
-      <h5 class="card-title"><%= @judicial.number %></h5>
-      <p class="card-text">Classe: <%= @judicial.judicial_type %></p>
+  <div class="mt-4 tabs-judicial col-sm-12 col-md-6 offset-md-3">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" id="home-tab"  data-toggle="tab" href="#judicial" role="tab" aria-controls="home" aria-selected="true">Processo</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="andamento-tab" data-toggle="tab" href="#andamento" role="tab" aria-controls="andamento" aria-selected="false">Andamento</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" id="fluxo-tab" data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">Fluxo</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="tab-content" id="myTabContent">
+    <%= render partial: "judicial" %>
+    <%= render partial: "steps" %>
+    <%= render partial: "fluxogram" %>
+  </div>
+</div>
+
+  <!-- MODALS -->
+<div class="modal fade" id="decisionModal" tabindex="-1" role="dialog" aria-labelledby="decisionModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="decisionModalLabel">Decisão</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
-
-  <!-- Exibir as partes do processo -->
-
-  <%= render partial: "shared/table_steps", locals: { judicial: @judicial } %>
-
-  <div class="d-flex justify-content-center">
-    <% if current_user %>      
-      <!-- Criar rota de cadastro de processo (myjudicials?) e colocar no link
-        Ex: userjudicials_path(@judicial) -->
-      <%= link_to 'Salvar processso',  class: "btn btn-primary"%>
-    <% else %>
-      <%= link_to 'Me cadastrar', new_user_registration_path, class: "btn btn-primary" %>
-    <% end %>
-  </div>
-
 </div>

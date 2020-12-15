@@ -1,46 +1,22 @@
 <div class="container">
   <div class="color-container d-flex justify-content-center" style="min-height: 30vh;">
-    <%= image_tag "jscomtexto1.png", class: "m-auto" %>
-  </div>
-  <div class="main d-flex justify-content-between">
-    <a href="#" class="btn btn-danger">danger</a>
-    <a href="#" class="btn btn-info">info</a>
-    <a href="#" class="btn btn-primary">primary</a>
-    <a href="#" class="btn btn-success">success</a>
-  </div>
-  <div class="text-center my-5">
-    <h1>teste h1</h1>
-    <h3>teste h3</h3>
-    <p>teste p</p>
-  </div>
-  <%= form_tag judicials_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Procure um nome ou o número do processo"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-<div class="cards">
-  <div class="card-category">
-    Processo XPTO: Na realidade já começou a vida. Deve se procurar um cara muito importante para resolver ela 
-    <p class="notification"><i class="attention fas fa-exclamation-triangle"></i></p >
+      <%= image_tag "transparentJS.png", class: "m-auto banner" %>
   </div>
 
-  <div class="card-category">
-    Processo WWW: Processo que está paralizado porque precisa de muita vida importante mas não desista nunca. 
-    <p class="notification"><i class="normal fas fa-check"></i></p >
+
+  <div class="my-3">
+    <%= form_tag judicials_path, class: "m-2 form-inline d-flex justify-content-center",  method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        size: "50",
+        maxlength: "254",
+        class: "form-control",
+        placeholder: "Procure um nome ou o número do processo"
+      %>
+      <%= submit_tag "Buscar", class: "btn btn-primary" %>
+    <% end %>
   </div>
 
-  <div class="card-category">
-    Mussum Ipsum, cacilds vidis litro abertis. Cevadis im ampola pa arma uma pindureta. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! 
-    <p class="notification"><i class="danger fas fa-dumpster-fire"></i></p >
+  <div class="typed explanatory-text mt-5 col-sm-12 col-md-8 offset-md-3">
   </div>
 </div>
-  
-
-</div>
-
-
-
-
