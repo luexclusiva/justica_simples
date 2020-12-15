@@ -1,7 +1,9 @@
 .btn{
-  opacity: 0.8;
-  border: black 3px solid;
-}
+  // opacity: 0.8;
+  border: 1px ;
+  padding-left: $spacer !important;
+  padding-right: $spacer !important;
+   }
 
 .btn-ghost {
   color: black;
