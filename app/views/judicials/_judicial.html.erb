@@ -1,5 +1,5 @@
 <div class="tab-pane fade show  active box_fora col-sm-12 col-md-6 offset-md-3" id="judicial" role="tabpanel" aria-labelledby="judicial-tab">
-  
+    
   <!-- Dados do processo -->
   <div class="m-1 mt-3 mb-3">
     <h5 class="text-center mb-3"><strong><%= @judicial.number %></strong></h5>
@@ -31,9 +31,7 @@
   <div class="div">    
     <%= render partial: "new_fluxogram" %>    
   </div>
-
-  <a href="https://www.tjdft.jus.br/" target="_blank" rel="noopener noreferrer">Verificar andamento no site do TJDFT</a>
-  <hr>
+    
   <% if current_user %>
     <% if UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).empty? %>
       <div class="mx-auto">
@@ -46,8 +44,9 @@
       </div>
     <% end %>
   <% else %>
-    <%= link_to "Acompanhar", new_user_session_path, class:"btn btn-ghost pl-3 pr-3" %>
-    <!-- Problema: manda para login e depois abre a página inicial; deveria ser a página Meus processos. -->
+    <%= link_to "Acompanhar", new_user_session_path, class:"btn btn-big mx-auto" %>
   <% end %>
+
+  <a href="https://pje.tjdft.jus.br/consultapublica/ConsultaPublica/DetalheProcessoConsultaPublica/listView.seam?ca=<%= @judicial.url_origin %>" class = "btn btn-ghost pl-3 pr-3" target="_blank" rel="noopener noreferrer">Ver no TJDFT</a>
 
 </div>
