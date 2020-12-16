@@ -152,6 +152,15 @@
   box-shadow: 0px 0px 4px rgba(1,1,1,0.2);
 }
 
+.steps {
+  position: relative;
+}
+
+.avatar-stage {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+
 a{
   color: $paleta_azul_escuro;
 }
