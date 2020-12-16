@@ -18,6 +18,9 @@ class UserJudicialsController < ApplicationController
   def destroy
     set_user_judicial
     @userjudicial.destroy
+
+
+    redirect_to user_judicials_path
   end
 end
 
