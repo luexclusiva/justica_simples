@@ -32,10 +32,15 @@
       </p>
     </div>
   </div>
+  <div class="div">
+      <%= render partial: "new_fluxogram" %>
+  </div>
   <div class=" card judicial-phase pt-3 pl-4">
     <div>
+
       <a class="nav-link" data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
         <h5 class="mb-3">
+
           <%= "O processo encontra-se na #{@phase[0]}" %>
         </h5>
       </a>
