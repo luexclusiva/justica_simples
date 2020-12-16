@@ -16,7 +16,24 @@
   transition: opacity 0.3s ease;
 }
 
+
 input[type=submit] {
   margin: 5px;
   padding: 5px;
+}
+
+.btn-big{
+  color: white;
+  background-color: $laranja_detran;
+  font-size: 18px;
+  padding: 8px 24px !important;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+    &:hover{
+      opacity: .6;
+      color: white;
+    }
 }

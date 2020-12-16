@@ -71,7 +71,8 @@ judicials = data["judicials"]
 judicials.each do |jud|
   new_judicial = Judicial.create!(
     number: jud["processo"],
-    judicial_type: jud["classe"]
+    judicial_type: jud["classe"],
+    url_origin: jud["url_origin"]
   )
 
   jud["partes"].each do |key, value|
