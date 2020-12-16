@@ -1,6 +1,7 @@
 .bg{
   background-color: #415c6b;
 }
+
 .judicial-parties{
   margin-bottom: 0px;
 }
@@ -21,7 +22,6 @@
   color: white;
 }
 
-
 .fluxogram  {
   color: black;
 
@@ -30,7 +30,6 @@
   }
 
 }
-
 
 .petitoria {
   width: 240px;
@@ -88,8 +87,6 @@
   }
 }
 
-
-
 #atual_pointer {
   width: 22px;
   height: 20px;
@@ -112,7 +109,6 @@
   }
 }
 
-
 .phase-grey {
   background-color: #80808047;
   color:white;
@@ -125,4 +121,16 @@
   color:white;
   text-shadow: 0px 0px 2px rgba(1,1,1,0.5);
   box-shadow: 0px 0px 4px rgba(1,1,1,0.2);
+}
+
+a{
+  color: $paleta_azul_escuro;
+}
+
+a:hover {
+  color: $paleta_azul_normal;
+}
+
+ul.square {
+  list-style-type: square;
 }
