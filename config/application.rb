@@ -19,6 +19,8 @@ module JusticaSimples
     # configuracao da localizacao para o pt-br - i18n
     config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
     config.i18n.default_locale = :"pt-BR"
+    # Ignora os caminhos do devise para não sobrescrever a última página visitada com uma página devise.
+    config.ignored_paths = %W(/users/sign_in /users/sign_up /users/password /users/sign_out /users/confirm_password)
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
