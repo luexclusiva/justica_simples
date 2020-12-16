@@ -1,46 +1,51 @@
 <div class="tab-pane fade show  active box_fora col-sm-12 col-md-6 offset-md-3" id="judicial" role="tabpanel" aria-labelledby="judicial-tab">
-
-  <div class="card mt-5 mb-3">
-    <h5 class="mt-2 pb-2 pl-3 pt-2"><%= @judicial.number %></h5>
-    <div class="mb-2 pl-2">
-      <% @judicial.parties.each_with_index do |party| %>
-        <p class="judicial-parties"><%= "#{(party.role).capitalize}: #{party.name}" %></p>
-      <% end %>
-    </div>
+  
+  <!-- Dados do processo -->
+  <div class="m-1 mt-3 mb-3">
+    <h5 class="text-center mb-3"><strong><%= @judicial.number %></strong></h5>
+    <% @judicial.parties.each do |party| %>
+      <p class="judicial-parties"><%= "#{(party.role).capitalize}: #{party.name}" %></p>
+    <% end %>
   </div>
-  <div class=" card judicial-last-step mb-3 pt-3 pl-4">
-    <div>
-      <p>Último andamento</p>
+
+  <!-- Último andamento -->
+  <div class="card mb-3 mt-2">
+    <div class="card-header">Último andamento - simplificado</div>
+    <div class="card-body text-dark">      
       <% unless @judicial.judicial_steps.last.decision == "0" %>
         <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
-          <h4 class="mb-3">
-            <%= @judicial.judicial_steps.last.step.translation %>
-          </h4>
+          <p><%= @judicial.judicial_steps.last.step.translation %></p>
         </a>
       <% else %>
-      <h4 class="mb-3">
+      <p>
         <%= @judicial.judicial_steps.last.step.translation %>
-      </h4>
+      </p>
       <% end %>
     </div>
   </div>
-  <div class=" card judicial-original mb-3 pt-3 pl-4">
-    <div>
-      <p>Andamento original:</p>
-      <p class="mb-3">
-          <%= @judicial.judicial_steps.last.step.description %>
-      </p>
-    </div>
+  <div class="div">
+      <%= render partial: "new_fluxogram" %>
   </div>
-  <div class=" card judicial-phase pt-3 pl-4">
-    <div>
-      <a class="nav-link" data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
-        <h5 class="mb-3">
-          <%= "O processo encontra-se na #{@phase[0]}" %>
-        </h5>
-      </a>
-    </div>
-  </div>
+
+  <table class="table table-striped">    
+    <tbody>
+      <tr>        
+        <td>
+          <h6>Andamento original</h6>
+          <p><%= @judicial.judicial_steps.last.step.description %></p>
+        </td>        
+      </tr>
+      
+    </tbody>
+  </table>
+
+  <ul class="square">
+    <li>Processo em <a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
+        <%= "#{@phase[0]}" %>
+      </a>    
+    </li>
+  </ul>
+
   <hr>
   <% if current_user %>
     <% if UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).empty? %>
@@ -56,4 +61,5 @@
   <% else %>
     <%= link_to "Para acompanhar esse processo faça o login", new_user_session_path %>
   <% end %>
+
 </div>
