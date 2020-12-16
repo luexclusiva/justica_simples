@@ -3,9 +3,10 @@
     <% @judicials.each do |judicial| %>
       <%=link_to judicial_path(judicial), class:"card card-judicial mt-3 ml-2 col-sm-12 col-md-5 mx-auto" do %>
         <div class="my-3 ml-3">
-          <h5><strong><%= judicial.number %> </strong></h5>
+          <p>Processo nº:</p>
+          <h5 class="mt-0"><strong><%= judicial.number %> </strong></h5>
           <% judicial.parties.each do |party| %>
-          <p class="judicial-parties"><%= party.name %></p>
+          <p class="judicial-parties">Parte: <%= party.name %></p>
           <% end %>
         </div>
       <% end %>
