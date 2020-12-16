@@ -1,8 +1,10 @@
 <div class="fluxogram my-5">
-  <ol class="arrows">
-     <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a href="#">Início</a></li>
-     <li class="<%= if @phase[1] == 1 then "color-orange" elsif @phase[1] > 1 then "color-gray" end %>"><a href="#">Acordo</a></li>
-     <li class= "<%= if @phase[1] == 2 then "color-orange" elsif @phase[1] > 2 then "color-gray" end %>"><a href="#">Provas</a></li>
-     <li class= "<%= "color-orange" if @phase[1] == 3 %>"><a href="#">Decisão</a></li>
-  </ol>
+  <a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
+    <ol class="arrows">
+       <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Início</a></li>
+       <li class="<%= if @phase[1] == 1 then "color-orange" elsif @phase[1] > 1 then "color-gray" end %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Acordo</a></li>
+       <li class= "<%= if @phase[1] == 2 then "color-orange" elsif @phase[1] > 2 then "color-gray" end %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Provas</a></li>
+       <li class= "<%= "color-orange" if @phase[1] == 3 %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Decisão</a></li>
+    </ol>
+  </a>
 </div>
