@@ -14,7 +14,7 @@
     <div class="card-body text-dark">      
       <% unless @judicial.judicial_steps.last.decision == "0" %>
         <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
-          <p><%= @judicial.judicial_steps.last.step.translation %></p>
+          <p><%= @judicial.judicial_steps.last.date.strftime("%d/%m/%Y") %> - <%= @judicial.judicial_steps.last.step.translation %></p>
         </a>
       <% else %>
       <p>
@@ -23,29 +23,16 @@
       <% end %>
     </div>
   </div>
-  <div class="div">
-      <%= render partial: "new_fluxogram" %>
+
+  <!-- <a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
+        <%#= "#{@phase[0]}" %> </a> -->    
+  
+  <h6>Veja em que fase está seu processo:</h6> 
+  <div class="div">    
+    <%= render partial: "new_fluxogram" %>    
   </div>
 
-  <table class="table table-striped">    
-    <tbody>
-      <tr>        
-        <td>
-          <h6>Andamento original</h6>
-          <p><%= @judicial.judicial_steps.last.step.description %></p>
-        </td>        
-      </tr>
-      
-    </tbody>
-  </table>
-
-  <ul class="square">
-    <li>Processo em <a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
-        <%= "#{@phase[0]}" %>
-      </a>    
-    </li>
-  </ul>
-
+  <a href="https://www.tjdft.jus.br/" target="_blank" rel="noopener noreferrer">Verificar andamento no site do TJDFT</a>
   <hr>
   <% if current_user %>
     <% if UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).empty? %>
@@ -59,7 +46,7 @@
       </div>
     <% end %>
   <% else %>
-    <%= link_to "Para acompanhar esse processo faça o login", new_user_session_path %>
+    <%= link_to "Acompanhar", new_user_session_path, class:"btn btn-ghost pl-3 pr-3" %>
   <% end %>
 
 </div>
