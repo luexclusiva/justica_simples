@@ -3,21 +3,29 @@
       <%= image_tag "transparentJS.png", class: "m-auto banner" %>
   </div>
 
+  <div class="explanatory-text mb-5 col-sm-9 col-md-4">
+    <span id="banner-typed-text"></span>
+  </div>
 
-  <div class="my-3">
+  <div class="mt-5">
     <%= form_tag judicials_path, class: "m-2 form-inline d-flex justify-content-center",  method: :get do %>
-      <%= text_field_tag :query,
-        params[:query],
-        size: "50",
-        maxlength: "254",
-        class: "form-control",
-        placeholder: "Procure um nome ou o número do processo"
-      %>
-      <%= submit_tag "Buscar", class: "btn btn-primary" %>
+      <div>
+        <div>
+          <%= text_field_tag :query,
+          params[:query],
+          size: "50",
+          maxlength: "254",
+          class: "form-control",
+          placeholder: "Procure um nome ou o número do processo"
+          %>
+        </div>
+        <div class="mt-4 justify-content-around d-flex">
+          <%= submit_tag "Buscar", class: "btn btn-big mx-auto" %>
+        </div>
+
+      </div>
     <% end %>
   </div>
 
-  <div class="explanatory-text mt-5 col-sm-12 col-md-8 offset-md-3">
-    <span id="banner-typed-text"></span>
-  </div>
+
 </div>

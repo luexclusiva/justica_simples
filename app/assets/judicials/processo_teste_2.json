@@ -4,9 +4,14 @@
       "processo": "0703471-62.2020.8.07.0017",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["JOÃO PAULO MACHADO"],
-        "reu": ["BANCO DO BRASIL"]
+        "autor": [
+          "JOÃO PAULO MACHADO"
+        ],
+        "reu": [
+          "BANCO DO BRASIL"
+        ]
       },
+      "url_origin": "74b221576df2f49fd25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -62,9 +67,14 @@
       "processo": "0719366-66.2020.8.07.0016",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["JOÃO PAULO MACHADO"],
-        "reu": ["TAM LINHAS AEREAS S.A."]
+        "autor": [
+          "JOÃO PAULO MACHADO"
+        ],
+        "reu": [
+          "TAM LINHAS AEREAS S.A."
+        ]
       },
+      "url_origin": "28c5d640ce24ed50d25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -114,9 +124,14 @@
       "processo": "0704845-49.2020.8.07.0006",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["GUILHERME ALMEIDA"],
-        "reu": ["VIA VAREJO S.A."]
+        "autor": [
+          "GUILHERME ALMEIDA"
+        ],
+        "reu": [
+          "VIA VAREJO S.A."
+        ]
       },
+      "url_origin": "2a6074638503be88d25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -166,9 +181,14 @@
       "processo": "0702140-54.2020.8.07.0014",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["GUILHERME ALMEIDA"],
-        "reu": ["LOJAS RENNER S.A."]
+        "autor": [
+          "GUILHERME ALMEIDA"
+        ],
+        "reu": [
+          "LOJAS RENNER S.A."
+        ]
       },
+      "url_origin": "9b7c58f4e0b6f0ffd25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -224,9 +244,14 @@
       "processo": "0700856-44.2020.8.07.0003",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["ALEXANDRE KENJI"],
-        "reu": ["REDECARD S.A."]
+        "autor": [
+          "ALEXANDRE KENJI"
+        ],
+        "reu": [
+          "REDECARD S.A."
+        ]
       },
+      "url_origin": "426cd52991ca2970d25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -349,9 +374,14 @@
       "processo": "0700819-08.2020.8.07.0006",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["ALEXANDRE KENJI"],
-        "reu": ["SKY SERVICOS DE BANDA LARGA LTDA."]
+        "autor": [
+          "ALEXANDRE KENJI"
+        ],
+        "reu": [
+          "SKY SERVICOS DE BANDA LARGA LTDA."
+        ]
       },
+      "url_origin": "f76a7afb7a0f2c68d25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -377,9 +407,14 @@
       "processo": "0716323-46.2019.8.07.0020",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["ELUZAÍ SANTOS"],
-        "reu": ["GOL LINHAS AÉREAS S.A."]
+        "autor": [
+          "ELUZAÍ SANTOS"
+        ],
+        "reu": [
+          "GOL LINHAS AÉREAS S.A."
+        ]
       },
+      "url_origin": "dc80c6b4805c0756d25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -429,9 +464,14 @@
       "processo": "0706083-79.2020.8.07.0014",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["ELUZAÍ SANTOS"],
-        "reu": ["GOL LINHAS AÉREAS S.A."]
+        "autor": [
+          "ELUZAÍ SANTOS"
+        ],
+        "reu": [
+          "GOL LINHAS AÉREAS S.A."
+        ]
       },
+      "url_origin": "0adf6db47a782271d25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -469,9 +509,14 @@
       "processo": "0716590-23.2020.8.07.0007",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["JOSE OTON SOARES MARQUES"],
-        "reu": ["BANCO DO BRASIL S.A."]
+        "autor": [
+          "JOSE OTON SOARES MARQUES"
+        ],
+        "reu": [
+          "BANCO DO BRASIL S.A."
+        ]
       },
+      "url_origin": "57d28c3948ba536ed25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
@@ -503,9 +548,16 @@
       "processo": "0727124-96.2020.8.07.0016",
       "classe": "PROCEDIMENTO DO JUIZADO ESPECIAL CÍVEL (436)",
       "partes": {
-        "autor": ["KLEUTON CUNHA DE MATOS ","JESSICA ANTUNES MATOS"],
-        "reu": ["BANCO DO BRASIL S.A.", "CLARO S.A."]
+        "autor": [
+          "KLEUTON CUNHA DE MATOS ",
+          "JESSICA ANTUNES MATOS"
+        ],
+        "reu": [
+          "BANCO DO BRASIL S.A.",
+          "CLARO S.A."
+        ]
       },
+      "url_origin": "18ece01d99fddd40d25d8db0bfbbd53fb4b253efd0929626",
       "andamento": [
         [
           118,
