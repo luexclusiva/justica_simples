@@ -3,9 +3,9 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(current_user)
     if current_user.user_judicials?
-      user_judicials_path(current_user)
+      stored_location_for(current_user) || user_judicials_path(current_user)
     else
-      root_path
+      stored_location_for(current_user) || root_path
     end
   end
 end
