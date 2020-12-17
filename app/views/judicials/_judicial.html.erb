@@ -1,5 +1,8 @@
 <div class="tab-pane fade show  active box_fora col-sm-12 col-md-6 offset-md-3" id="judicial" role="tabpanel" aria-labelledby="judicial-tab">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 642780acde036bd24f177ff84b734adac59e1d18
   <!-- Dados do processo -->
   <div class="m-1 pt-2 pb-3">
     <p class="number_process pt-3 pb-3"><%= @judicial.number %></p>
@@ -14,7 +17,6 @@
     <div class="card-body text-dark">      
       <% unless @judicial.judicial_steps.last.decision == "0" %>
         <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
-
           <p><%= @judicial.judicial_steps.last.date.strftime("%d.%m.%Y") %> - <%= @judicial.judicial_steps.last.step.translation %></p>
         </a>
       <% else %>
