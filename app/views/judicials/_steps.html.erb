@@ -7,49 +7,56 @@
           <div class='legend-title'></div>
           <div class='legend-scale'>
             <ul class='legend-labels'>
-              <li><span class='verde_coding'></span>Inicial</li>
-              <li><span class='bege_coding'></span>Audiência</li>
+              <li><span class='verde_coding'></span>Início</li>
+              <li><span class='bege_coding'></span>Acordo</li>
               <li><span class='cinza_coding'></span>Provas</li>
-              <li><span class='azul_coding'></span>Julgamento</li>
+              <li><span class='azul_coding'></span>Decisão</li>
             </ul>
           </div>
 
         </div>
       </div>
   </div>
-<div class='legend-source'>Source: <a href="#link to source">Name of source</a></div>
 </div>
   <div class="card">
     <% color_anterior = " " %>
+    <% step_anterior = 9 %>
     <% @judicial.judicial_steps.reverse.each_with_index do |jud_step, index| %>
 
         <% case jud_step.step.stage %>
           <% when 1 %>
             <% color_coding = "verde_coding" %>
+            <% step = jud_step.step.stage %>
           <% when 2 %>
             <% color_coding = "bege_coding" %>
+            <% step = jud_step.step.stage %>
           <% when 3 %>
             <% color_coding = "cinza_coding" %>
+            <% step = jud_step.step.stage %>
           <% when 4 %>
             <% color_coding = "azul_coding" %>
+            <% step = jud_step.step.stage %>
           <% else %>
             <% color_coding = color_anterior %>
+            <% step = step_anterior %>
         <% end %>
         <% color_anterior = color_coding  %>
+        <% step_anterior =  step %>
 
         <div class="<%="primeiro-step" if index == 0 %>
          card-step-header d-flex justify-content-between pr-3 card-section  <%= color_coding %> 
          d-flex px-3 pt-2"> 
           
+
           <p class="avatar-stage">
-            <% if jud_step.step.priority == 1 %>
+            <% if step == 1 %>
+              <i class="far fa-circle"></i>
+            <% elsif step == 2 %>
+              <i class="far fa-handshake"></i>
+            <% elsif step == 3 %>
+              <i class="far fa-file-alt"></i>
+            <% elsif step  == 4 %>
               <i class="fas fa-gavel"></i>
-            <% elsif jud_step.step.priority == 2 %>
-              <i class="fas fa-user-friends"></i>
-            <% elsif jud_step.step.priority == 3 %>
-              <i class="fas fa-calendar-alt"></i>
-            <% elsif jud_step.step.priority == 4 %>
-              <i class="fas fa-handshake"></i>
             <% else %>
               <i class="fas fa-balance-scale"></i>
             <% end %>
@@ -68,3 +75,4 @@
     <% end %>
   </div>
 </div>
+
