@@ -1,15 +1,15 @@
-<div class="container">
+<div class="container landing-page-container">
   <div class="color-container d-flex justify-content-center" style="min-height: 30vh;">
-      <%= image_tag "transparentJS.png", class: "m-auto banner" %>
+      <%= image_tag "logo5.png", class: "m-auto banner" %>
   </div>
 
-  <div class="explanatory-text mb-5 col-sm-9 col-md-6 offset-md-3">
+  <div class="explanatory-text mb-5 col-sm-9 col-md-6 offset-md-3 banner-height">
     <p class="text-center">
       <span id="banner-typed-text" ></span>
     </p>
   </div>
 
-  <div class="mt-5">
+  <div class="search-content">
     <%= form_tag judicials_path, class: "m-2 form-inline d-flex justify-content-center",  method: :get do %>
       <div>
         <div>
@@ -21,13 +21,14 @@
           placeholder: "Procure um nome ou o número do processo"
           %>
         </div>
-        <div class="mt-4 justify-content-around d-flex">
+        <div class="mt-5 justify-content-around d-flex">
           <%= submit_tag "Buscar", class: "btn btn-big mx-auto" %>
         </div>
 
       </div>
     <% end %>
   </div>
-
-
+  <div class="push"></div>
 </div>
+
+<%= render 'shared/footer' %>
