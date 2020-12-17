@@ -9,7 +9,7 @@
     </p>
   </div>
 
-  <div class="mt-5">
+  <div class="search-content">
     <%= form_tag judicials_path, class: "m-2 form-inline d-flex justify-content-center",  method: :get do %>
       <div>
         <div>
@@ -21,7 +21,7 @@
           placeholder: "Procure um nome ou o número do processo"
           %>
         </div>
-        <div class="mt-4 justify-content-around d-flex">
+        <div class="mt-5 justify-content-around d-flex">
           <%= submit_tag "Buscar", class: "btn btn-big mx-auto" %>
         </div>
 
@@ -31,8 +31,4 @@
   <div class="push"></div>
 </div>
 
-<div class="footer">
-  <div class="footer-copyright">
-    Aplicativo criado no Le Wagon - Bootcamp <%= image_tag "le-wagon.png" %>
-  </div>
-</div>
+<%= render 'shared/footer' %>
