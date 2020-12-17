@@ -7,11 +7,12 @@
 }
 
 .arrows { white-space: nowrap; margin-left:0 }
+
 .arrows li {
     display: inline-block;
     line-height: 26px;
     margin: 0 9px 0 -10px;
-    padding: 0 10px;
+    padding: 0 10px ;
     position: relative;
 }
 .arrows li::before,

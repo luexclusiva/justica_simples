@@ -40,8 +40,48 @@
     <p class="notification"><i class="danger fas fa-dumpster-fire"></i></p >
   </div>
 </div>
-  
-
+ 
+<div class="tab-pane col-sm-12 col-md-6 offset-md-3" id="andamento" role="tabpanel" aria-labelledby="andamento-tab">
+  <div class=" steps-title my-3 mx-2">
+    <h4 class="judicials-steps-title pb-2 pl-3 pt-2 mt-2"> Andamentos do processo</h4>
+  </div>
+  <table class="table table-striped">    
+    <tbody>
+      <% @judicial.judicial_steps.reverse.each do |jud_step| %>
+          <tr>        
+            <td>
+              <div class="steps">
+                <p><%= jud_step.date.strftime("%d.%m.%Y") %></p>
+                  <p class="avatar-stage">
+                    <% if jud_step.step.priority == 1 %>
+                      <i class="fas fa-gavel"></i>
+                    <% elsif jud_step.step.priority == 2  %>
+                      <i class="fas fa-user-friends"></i>
+                    <% elsif jud_step.step.priority == 3  %>
+                      <i class="fas fa-calendar-alt"></i>
+                    <% elsif jud_step.step.priority == 4  %>
+                      <i class="fas fa-handshake"></i>
+                    <% else %>
+                      <i class="fas fa-balance-scale"></i>
+                    <% end %>
+                  </p>
+                <% unless @judicial.judicial_steps.last.decision == "0" %>
+                  <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
+                    <p class="mb-3">
+                      <%= @judicial.judicial_steps.last.step.translation %>.
+                    </p>
+                  </a>
+                <% else %>
+                  <p>
+                    <%= @judicial.judicial_steps.last.step.translation %>
+                  </p>
+                <% end %>
+              </div>
+            </td>        
+          </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>
 
 
