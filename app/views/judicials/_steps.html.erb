@@ -1,32 +1,77 @@
+
 <div class="tab-pane fade col-sm-12 col-md-6 offset-md-3" id="andamento" role="tabpanel" aria-labelledby="andamento-tab">
   <div class=" steps-title my-3 mx-2">
     <h4 class="judicials-steps-title pb-2 pl-3 pt-2 mt-2"> Andamentos do processo</h4>
+      <div class='my-legend d-flex justify-content-center'>
+        <div>
+          <div class='legend-title'></div>
+          <div class='legend-scale'>
+            <ul class='legend-labels'>
+              <li><span class='inicio_coding'></span>Início</li>
+              <li><span class='acordo_coding'></span>Acordo</li>
+              <li><span class='provas_coding'></span>Provas</li>
+              <li><span class='decisao_coding'></span>Decisão</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
   </div>
-  <% @judicial.judicial_steps.reverse.each do |jud_step| %>
-  <div class="card d-flex pb-1 pl-3 pt-2 mb-3 mx-1">
-    <div class="card-step-header d-flex justify-content-between pr-3">
-      <p><%= jud_step.date.strftime("%d.%m.%Y") %></p>
-      <p class="avatar-stage">
-        <% if jud_step.step.priority == 1 %>
-          <i class="fas fa-gavel"></i>
-        <% elsif jud_step.step.priority == 2  %>
-          <i class="fas fa-user-friends"></i>
-        <% elsif jud_step.step.priority == 3  %>
-          <i class="fas fa-calendar-alt"></i>
-        <% elsif jud_step.step.priority == 4  %>
-          <i class="fas fa-handshake"></i>
-        <% else %>
-          <i class="fas fa-balance-scale"></i>
+  <div class="card">
+    <% color_anterior = " " %>
+    <% step_anterior = 9 %>
+    <% @judicial.judicial_steps.reverse.each_with_index do |jud_step, index| %>
+
+        <% case jud_step.step.stage %>
+          <% when 1 %>
+            <% color_coding = "inicio_coding" %>
+            <% step = jud_step.step.stage %>
+          <% when 2 %>
+            <% color_coding = "acordo_coding" %>
+            <% step = jud_step.step.stage %>
+          <% when 3 %>
+            <% color_coding = "provas_coding" %>
+            <% step = jud_step.step.stage %>
+          <% when 4 %>
+            <% color_coding = "decisao_coding" %>
+            <% step = jud_step.step.stage %>
+          <% else %>
+            <% color_coding = color_anterior %>
+            <% step = step_anterior %>
         <% end %>
-      </p>
-    </div>
-    <% unless jud_step.decision == "0" %>
-    <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= jud_step.decision %>">
-      <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
-    </a>
-    <% else %>
-    <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
+        <% color_anterior = color_coding  %>
+        <% step_anterior =  step %>
+
+        <div class="<%="primeiro-step" if index == 0 %>
+         card-step-header d-flex justify-content-between pr-3 card-section  <%= color_coding %> 
+         d-flex px-3 pt-2"> 
+          
+
+          <p class="avatar-stage">
+            <% if step == 1 %>
+              <i class="far fa-circle"></i>
+            <% elsif step == 2 %>
+              <i class="far fa-handshake"></i>
+            <% elsif step == 3 %>
+              <i class="far fa-file-alt"></i>
+            <% elsif step  == 4 %>
+              <i class="fas fa-gavel"></i>
+            <% else %>
+              <i class="fas fa-balance-scale"></i>
+            <% end %>
+          </p>
+
+          <p class='mb-0'><%= jud_step.date.strftime("%d.%m.%Y") %> <%= jud_step.step.stage %></p>
+          <hr>
+        </div>
+          <% unless jud_step.decision == "0" %>
+          <a href="" class="px-2 stepModal border-bottom <%= color_coding %>" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= jud_step.decision %>">
+            <p><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
+          </a>
+          <% else %>
+          <p class="px-2 <%="ultimo-step" if index == @judicial.judicial_steps.count - 1 %> pb-2 border-bottom mb-0 <%= color_coding %>"><strong><%= jud_step.step.translation %></strong><%= " - #{jud_step.complement}" unless jud_step.complement == "0" %></p>
+          <% end %>
     <% end %>
   </div>
-  <% end %>
 </div>
+
