@@ -15,11 +15,18 @@
   <% else %>
     <div class="text-center mt-5">
       <h3>Não foi encontrado nenhum processo!</h3>
-      <p>Verifique se escreveu o nome ou o número do processo corretamente</p>
-
-      <%= link_to root_path do %>
-        <p class="btn btn-primary">Voltar</p>
-      <% end %>
+      <div class="card ">
+        <div class="card-body">
+          <h3 class="text-danger">Atenção</h3>
+          <p>Este aplicativo é uma prova de conceito desenvolvido no curso da ENAP/Le Wagon.</p>
+          <p>O banco de dados utilizado para desenvolvimento e teste não está conectado ao acervo de processo de nenhum Tribunal de Justiça.</p>
+          <p>Para maiores informações sobre o seu processo, por favor, visite a página do Tribunal de Justiça em que tramita sua ação.</p>
+          <p>Para avaliar as funcionalidades deste aplicativo busque por Banco do Brasil, Tam Linhas Aéreas, Via Varejo, Lojas Renner, Sky ou Redecard.</p>
+        </div>
+      </div>
+      <div class="mt-4">
+        <%= link_to "Voltar", root_path, class:"btn btn-primary" %>
+      </div>
     </div>
   <% end %>
 </div>
