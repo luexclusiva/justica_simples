@@ -10,16 +10,26 @@
           <a href="" class="stepModal" data-target="#fluxModal1" data-toggle="modal">Início do processo</a>
         </h6>
       </div>
-
-      <div id="<%= "atual_" if @phase[1]==1 %>pointer"></div>
+      <!-- <div id="pointer"></div> -->
+      <div class="arrow-div d-flex justify-content-around">
+        <svg id="more-arrows">
+          <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+          <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+        </svg>
+      </div>
 
       <div class="acordo-bg rounded-pill card card-fluxo mx-auto mt-3 d-flex align-items-center">
         <h6 class="p-2 mx-auto">
           <a href="" class="stepModal" data-target="#fluxModal2" data-toggle="modal">Tentativa de acordo</a>
         </h6>
       </div>
-
-      <div id="<%= "atual_" if @phase[1]=2 %>pointer"></div>
+      <!-- <div id="pointer"></div> -->
+      <div class="arrow-div d-flex justify-content-around">
+        <svg id="more-arrows">
+          <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+          <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+        </svg>
+      </div>
 
       <div class="provas-bg rounded-pill card card-fluxo mx-auto mt-3 d-flex align-items-center <%= if @phase[1] == 2 then "phase-yellow" elsif @phase[1] > 2 then "phase-grey" end %>">
         <h6 class="p-2 mx-auto">
@@ -27,7 +37,13 @@
         </h6>
       </div>
 
-        <div id="<%= "atual_" if @phase[1]==3 %>pointer"></div>
+      <!-- <div id="pointer"></div> -->
+      <div class="arrow-div d-flex justify-content-around">
+        <svg id="more-arrows" class="last-arrow">
+          <polygon class="arrow-bottom" points="37.6,64 0,36.1 5.1,32.8 37.6,56.8 70.4,32.8 75.5,36.1 "/>
+          <polygon class="arrow-middle" points="37.6,45.8 0.8,18.7 4.4,16.4 37.6,41.2 71.2,16.4 74.5,18.7 "/>
+        </svg>
+      </div>
 
       <div class="decisao-bg rounded-pill card card-fluxo mx-auto mt-3 d-flex align-items-center <%= "phase-yellow" if @phase[1] == 3 %>">
         <h6 class="p-2 mx-auto">
