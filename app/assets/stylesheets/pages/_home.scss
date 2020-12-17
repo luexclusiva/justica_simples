@@ -1,6 +1,8 @@
 // Specific CSS for your home-page
-body {
-  padding-bottom: 50px;
+html, body {
+  // padding-bottom: 50px;
+  height: 100%;
+  margin: 0;
 }
 
 a.link-navbar {
@@ -27,4 +29,11 @@ a.link-navbar {
 .banner-height{
   height: 24px;
   border: 1px solid $paleta_azul_claro2;
+}
+
+.landing-page-container{
+  min-height: 100%;
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -120px;
 }

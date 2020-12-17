@@ -1,0 +1,19 @@
+.footer {
+  background: $paleta_azul_escuro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0px 50px;
+  color: white;
+}
+
+.footer img {
+  width: 30px;
+  height: auto;
+  opacity: 0.8;
+}
+
+// .push {
+//   height: 50px;
+// }
