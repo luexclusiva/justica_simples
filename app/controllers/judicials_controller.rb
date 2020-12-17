@@ -11,7 +11,9 @@ class JudicialsController < ApplicationController
   end
 
   def show
+
     @userjudicial = UserJudicial.new
+    @userjudicial_follow = UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).first
     phases = [
       ["fase de apresentar os pedidos.", 0],
       ["fase de tentar entrar em acordo.", 1],
