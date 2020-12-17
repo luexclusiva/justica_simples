@@ -64,12 +64,12 @@
         <div hidden>
           <%= f.input :judicial_id, input_html: { value: @judicial.id } %>
         </div>
-        <%= f.button :submit, "Acompanhar", class:"btn btn-ghost pl-3 pr-3" %>
+        <%= f.button :submit, "Acompanhar", class:"btn btn-laranja" %>
         <% end %>
       </div>
     <% end %>
   <% else %>
-    <%= link_to "Acompanhar", new_user_session_path, class:"btn btn-big mx-auto" %>
+    <%= link_to "Acompanhar", new_user_session_path, class:"btn btn-laranja" %>
   <% end %>
 
   <a href="https://pje.tjdft.jus.br/consultapublica/ConsultaPublica/DetalheProcessoConsultaPublica/listView.seam?ca=<%= @judicial.url_origin %>" class = "btn btn-ghost pl-3 pr-3" target="_blank" rel="noopener noreferrer">Ver no TJDFT</a>
