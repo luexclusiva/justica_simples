@@ -61,8 +61,8 @@
 }
 
 .petitoria {
-  width: 240px;
-  height: 120px;
+  width: 200px;
+  height: 100px;
   // border-radius: 100px / 50px;
   margin: auto;
 }
@@ -70,7 +70,7 @@
 .conciliatoria {
   width: 200px;
   height: 100px;
-  border-radius: 5px;
+ // border-radius: 5px;
   margin: auto;
 }
 
@@ -83,13 +83,12 @@
 
 .decisoria {
   width: 200px;
-  height: 120px;
+  height: 100px;
   background: $light-gray;
   // border-radius: 50%;
   margin: auto;
   box-shadow: 0px 0px 4px rgba(1,1,1,0.2);
   text-shadow: 0px 0px 4px rgba(1,1,1,0.2);
-  margin-bottom: 0;
   p{
     padding-top: 70px;
   }

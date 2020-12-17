@@ -26,7 +26,7 @@ require("../../../vendor/assets/dist/js/dsgov")
 import "bootstrap";
 import { modalDecision } from "../lib/decisionModal"
 import { initTyped } from "../lib/init_typed"
-
+import { modalFlux } from "../lib/fluxModal"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
