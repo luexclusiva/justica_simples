@@ -1,10 +1,67 @@
-<div class="fluxogram my-5">
-  <a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
-    <ol class="arrows">
-       <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Início</a></li>
-       <li class="<%= if @phase[1] == 1 then "color-orange" elsif @phase[1] > 1 then "color-gray" end %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Acordo</a></li>
-       <li class= "<%= if @phase[1] == 2 then "color-orange" elsif @phase[1] > 2 then "color-gray" end %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Provas</a></li>
-       <li class= "<%= "color-orange" if @phase[1] == 3 %>"><a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="true">Decisão</a></li>
+
+  <div class="d-flex justify-content-center mt-5" >
+    <h5>
+      Em que fase estou:
+    </h5>
+  </div>
+<div class="fluxogram">
+  <div class="flux text-center border-bottom">
+  
+    <ol class="arrows mb-1 pl-0">
+      <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a href="#">
+        <span class="fa-stack <%= @phase[1] == 0 ? "destaque" : "fora-destaque" %>">
+            <!-- The icon that will wrap the number -->
+            <span class="far fa-circle fa-stack-2x <%= @phase[1] == 0 ? "text-muted" : "text-light" %>"></span>
+            <!-- a strong element with the custom content, in this case a number -->
+        </span>
+      </a></li>
+      <li class="<%= if @phase[1] == 1 then "color-orange" elsif @phase[1] > 1 then "color-gray" end %>"><a href="#">
+          <span class="fa-stack <%= @phase[1] == 1 ? "destaque" : "fora-destaque" %>">
+              <!-- The icon that will wrap the number -->
+              <span class="far fa-handshake fa-stack-2x <%= @phase[1] == 1 ? "text-muted" : "text-light"  %>"></span>
+              <!-- a strong element with the custom content, in this case a number -->
+          </span>
+      </a></li>
+      <li class= "<%= if @phase[1] == 2 then "color-orange" elsif @phase[1] > 2 then "color-gray" end %>"><a href="#">
+        <span class="fa-stack <%= @phase[1] == 2 ? "destaque" : "fora-destaque" %>">
+          <span class="far fa-file-alt fa-stack-2x <%= @phase[1] == 2 ? "text-muted" : "text-light"  %>"></span>
+          </span>
+      </a></li>
+      <li class= "<%= "color-orange pr-0 " if @phase[1] == 3 %>"><a href="#">
+        <span class="fa-stack <%= @phase[1] == 3 ? "destaque" : "fora-destaque" %>">
+          <span class="fas fa-gavel fa-stack-2x <%= @phase[1] == 3 ? "text-muted" : "text-light"  %>"></span>
+          </span>
+      </a></li>
     </ol>
-  </a>
+  </div>
+  <div class="mt-2">
+    <% case @phase[1] %>
+      <% when 0 %>
+      <h5 class="text-center"> 
+        Apresentação dos pedidos e justificativas
+      </h5>
+      <p>Por enquanto nada a se preocupar</p>
+      <% when 1 %>
+      <h5 class="text-center"> 
+        Tentativa de acordo
+      </h5>
+      <p>Fique atento às datas de audiências</p>
+      <% when 2 %>
+      <h5 class="text-center"> 
+        Apresentação de provas
+      </h5>
+      <p>Prepare os documentos</p>
+      <% else %>
+      <h5 class="text-center"> 
+        Decisão do processo
+      </h5>
+      <p>Nessa fase o juíz finalmente vai decidir algo</p>
+    <% end %> 
+  </div>
+  <div class="text-right">
+    <small >
+      <a  href="#">Saiba mais sobre as fases</a>
+    </small>
+  </div>
 </div>
+

@@ -1,8 +1,13 @@
-.arrows {
-  white-space: nowrap;
-  padding-left: 0px;
-  margin-left: -10px;
+
+.fluxogram {
+  // box-shadow: 0 0px 4px rgba(0,0,0,0.5);
+  padding: 12px;
+  border-radius: 8px;
+  // background-color: white;
 }
+
+.arrows { white-space: nowrap; margin-left:0 }
+
 .arrows li {
     display: inline-block;
     line-height: 26px;
@@ -12,7 +17,7 @@
 }
 .arrows li::before,
 .arrows li::after {
-    border-right: 1px solid #0951a0;
+    border-right: 5px solid $custom2;
     content: '';
     display: block;
     height: 50%;
@@ -44,3 +49,11 @@
 .arrows li:nth-of-type(2) a { color: #0951a0; }
 .arrows li:nth-of-type(3) a { color: $paleta_laranja; }
 .arrows li:nth-of-type(4) a { color: #0951a0; }
+
+.destaque {
+  font-size: 28px;
+}
+
+.fora-destaque {
+  font-size: 16px
+}

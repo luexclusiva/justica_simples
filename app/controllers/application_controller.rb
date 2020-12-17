@@ -22,7 +22,8 @@ class ApplicationController < ActionController::Base
   # Pegar o path da página atual e defini-la como última página visitada.
   def persist_last_visited_path
     unless Rails.configuration.ignored_paths.include?(request.path) || request.xhr?
-      session[:last_visited_path] = request.path
+      session[:last_visited_path] = request.path # página atual
+      session[:previous_path] = request.referer # página anterior: botão Voltar
     end  
   end
 
