@@ -1,13 +1,14 @@
 <div class="container jud-index">
   <% if @judicials.length.positive? %>
+    <h2 class="text-center">Processos encontrados:</h2>
     <% @judicials.each do |judicial| %>
       <%=link_to judicial_path(judicial), class:"card card-judicial mt-3 ml-2 col-sm-12 col-md-5 mx-auto" do %>
         <div class="my-3 ml-3">
-          <p class="mb-0">Processo nº:</p>
+          <p class="mb-0 font-black">Processo nº:</p>
           <h5 class="mt-0  border-bottom mr-2"><%= judicial.number %> </strong></h5>
-          <p class="mb-0">Partes:</p>
+          <p class="mb-0 font-black">Partes:</p>
           <% judicial.parties.each do |party| %>
-          <p class="judicial-parties"><strong><%= party.name %></strong></p>
+          <p class="judicial-parties font-black"><%= party.name %></p>
           <% end %>
         </div>
       <% end %>
