@@ -1,24 +1,16 @@
-.verde_coding {
-  background-color: white;
-  opacity: 0.7;
+.inicio_coding {
+  background-color: $inicio_coding;
 }
 
-.bege_coding {
-  background-color: $bege_coding;
-  opacity: 0.7;
+.acordo_coding {
+  background-color: rgba(208, 232, 242, 0.5);
 }
 
-.cinza_coding {
-  background-color: $cinza_coding;
-  opacity: 0.7;
+.provas_coding {
+  background-color: rgba(0, 118, 255, 0.4);
+
 }
 
-.azul_coding {
-  background-color: $azul_coding;
-  opacity: 0.7;
+.decisao_coding {
+  background-color:  rgba(252, 144, 3, 0.3)
 }
-
-// $verde_coding: #83c5be;
-// $bege_coding: #f7ede2;
-// $cinza_coding: #e9ecef;
-// $azul_coding: #a9d6e5;

@@ -7,10 +7,10 @@
           <div class='legend-title'></div>
           <div class='legend-scale'>
             <ul class='legend-labels'>
-              <li><span class='verde_coding'></span>Início</li>
-              <li><span class='bege_coding'></span>Acordo</li>
-              <li><span class='cinza_coding'></span>Provas</li>
-              <li><span class='azul_coding'></span>Decisão</li>
+              <li><span class='inicio_coding'></span>Início</li>
+              <li><span class='acordo_coding'></span>Acordo</li>
+              <li><span class='provas_coding'></span>Provas</li>
+              <li><span class='decisao_coding'></span>Decisão</li>
             </ul>
           </div>
 
@@ -24,16 +24,16 @@
 
         <% case jud_step.step.stage %>
           <% when 1 %>
-            <% color_coding = "verde_coding" %>
+            <% color_coding = "inicio_coding" %>
             <% step = jud_step.step.stage %>
           <% when 2 %>
-            <% color_coding = "bege_coding" %>
+            <% color_coding = "acordo_coding" %>
             <% step = jud_step.step.stage %>
           <% when 3 %>
-            <% color_coding = "cinza_coding" %>
+            <% color_coding = "provas_coding" %>
             <% step = jud_step.step.stage %>
           <% when 4 %>
-            <% color_coding = "azul_coding" %>
+            <% color_coding = "decisao_coding" %>
             <% step = jud_step.step.stage %>
           <% else %>
             <% color_coding = color_anterior %>
