@@ -1,35 +1,35 @@
 <div class="tab-pane fade" id="fluxograma" role="tabpanel" aria-labelledby="proposals-tab">
   <div class="fluxogram col-sm-12 col-md-6 offset-md-3">
-    
+
     <div class=" steps-title my-3 mx-auto">
       <h4 class="judicials-steps-title text-center"> Entenda as fases processuais</h4>
     </div>
 
-      <div class="rounded-pill petitoria d-flex align-items-center <%= @phase[1] == 0 ? "phase-yellow" : "phase-grey" %>">
+      <div class="inicio_coding inicio-bg rounded-pill card card-fluxo mx-auto d-flex align-items-center">
         <h6 class="p-2 mx-auto">
           <a href="" class="stepModal" data-target="#fluxModal1" data-toggle="modal">Início do processo</a>
         </h6>
       </div>
 
-      <div id="<%= "atual_" if @phase[1]==1 %>pointer"></div>  
+      <div id="<%= "atual_" if @phase[1]==1 %>pointer"></div>
 
-      <div class="conciliatoria mt-3 d-flex align-items-center <%= if @phase[1] == 1 then "phase-yellow" elsif @phase[1] > 1 then "phase-grey" end %>">
+      <div class="acordo-bg rounded-pill card card-fluxo mx-auto mt-3 d-flex align-items-center">
         <h6 class="p-2 mx-auto">
           <a href="" class="stepModal" data-target="#fluxModal2" data-toggle="modal">Tentativa de acordo</a>
         </h6>
       </div>
 
-      <div id="<%= "atual_" if @phase[1]=2 %>pointer"></div>  
+      <div id="<%= "atual_" if @phase[1]=2 %>pointer"></div>
 
-      <div class="provas mt-3 d-flex align-items-center <%= if @phase[1] == 2 then "phase-yellow" elsif @phase[1] > 2 then "phase-grey" end %>">
+      <div class="provas-bg rounded-pill card card-fluxo mx-auto mt-3 d-flex align-items-center <%= if @phase[1] == 2 then "phase-yellow" elsif @phase[1] > 2 then "phase-grey" end %>">
         <h6 class="p-2 mx-auto">
             <a href="" class="stepModal" data-target="#fluxModal3" data-toggle="modal">Apresentar provas</a>
         </h6>
       </div>
 
-        <div id="<%= "atual_" if @phase[1]==3 %>pointer"></div>  
+        <div id="<%= "atual_" if @phase[1]==3 %>pointer"></div>
 
-      <div class="rounded-pill decisoria mt-3 d-flex align-items-center <%= "phase-yellow" if @phase[1] == 3 %>">
+      <div class="decisao-bg rounded-pill card card-fluxo mx-auto mt-3 d-flex align-items-center <%= "phase-yellow" if @phase[1] == 3 %>">
         <h6 class="p-2 mx-auto">
           <a href="" class="stepModal" data-target="#fluxModal4" data-toggle="modal">Decisão do processo</a>
         </h6>
