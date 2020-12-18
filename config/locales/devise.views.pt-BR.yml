@@ -18,7 +18,7 @@ pt-BR:
         password: Senha
         password_confirmation: Confirme sua senha
         remember_created_at: Lembrar criado em
-        remember_me: Lembre-se de mim
+        remember_me: Continuar logado
         reset_password_sent_at: Resetar senha enviado em
         reset_password_token: Resetar token de senha
         sign_in_count: Contagem de acessos
