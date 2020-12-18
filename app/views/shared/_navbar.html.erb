@@ -8,24 +8,24 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
+    <ul class="navbar-nav mr-auto float-right">
       <% if user_signed_in? %>
 
       <% unless current_page?(user_judicials_path) %>
-        <li class="nav-item">
+        <li class="nav-item text-right">
           <%= link_to "Meus processos", user_judicials_path, class: "nav-link link-navbar" %>
         </li>
       <% end %>
 
         <% unless current_page?(root_path) %>
-          <li class="nav-item">
+          <li class="nav-item text-right">
             <%= link_to root_path, class: "nav-link link-navbar"  do %>
               <i class="fas fa-search"></i>
             <% end %>
           </li>
         <% end %>
 
-        <li class="nav-item" style="">
+        <li class="nav-item text-right" style="">
           <%= link_to destroy_user_session_path, class: "nav-link link-navbar"  do %>
             <i class="fas fa-sign-out-alt" data-bs-toggle="tooltip" data-bs-placement="top" title="Log out!"></i>
           <% end %>
@@ -36,14 +36,14 @@
         <% end %>
       <% else %>
         <% unless current_page?(root_path) %>
-          <li class="nav-item">
+          <li class="nav-item text-right">
             <%= link_to root_path, class: "nav-link link-navbar"  do %>
             <i class="fas fa-search"> </i>
             <% end %>
           </li>
         <% end %>
         <% unless current_page?(new_user_session_path) %>
-          <li class="nav-item">
+          <li class="nav-item text-right">
             <%= link_to "Login", new_user_session_path, class: "nav-link link-navbar" %>
           </li>
         <% end %>
