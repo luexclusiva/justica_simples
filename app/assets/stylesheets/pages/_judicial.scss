@@ -20,10 +20,12 @@
 
 .nav-tabs .nav-link {
   background-color: $paleta_azul_claro;
+  border-color: $paleta_azul_escuro $paleta_azul_escuro #eaeff0 !important;
 }
 
 .nav-tabs .nav-link.active {
   // border-color: black black #eaeff0;
+  border-color: $paleta_azul_escuro $paleta_azul_escuro #eaeff0 !important;
   background-color: $paleta_azul_escuro;
   color: $paleta_amarelo_claro;
 }

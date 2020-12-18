@@ -32,22 +32,35 @@
     <%= render partial: "new_fluxogram" %>
   </div>
 
-  <div class="d-flex justify-content-around">
+
+  <div class="d-flex justify-content-around pb-3">
+
 
     <% if current_user %>
-      <% if UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).empty? %>
-        <div class="mx-auto">
+      <% @userjudicial_follow = UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).first %>
+      <!-- if UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).empty?  -->
+      <div class="align-middle">
+      <% if @userjudicial_follow.nil? %>
+        <!-- <div class="mx-auto"> -->
           <%= simple_form_for @userjudicial do |f| %>
           <div hidden>
             <%= f.input :judicial_id, input_html: { value: @judicial.id } %>
           </div>
-          <%= f.button :submit, "Acompanhar", class:"btn btn-ghost pl-3 pr-3" %>
+          <%= f.button :submit, "Acompanhar", class:"btn btn-laranja-submit" %>
           <% end %>
-        </div>
+        <!-- </div> -->
+      <% else %>
+        <%= link_to "Desacompanhar", user_judicial_path(@userjudicial_follow.id), method: :delete, class:"btn btn-laranja", 
+            data: { confirm: "Deseja parar de acompanhar?" } %>        
       <% end %>
+      </div>
+
     <% else %>
       <%= link_to "Acompanhar", new_user_session_path, class:"btn btn-laranja" %>
     <% end %>
-    <a href="https://pje.tjdft.jus.br/consultapublica/ConsultaPublica/DetalheProcessoConsultaPublica/listView.seam?ca=<%= @judicial.url_origin %>" class = "btn btn-ghost pl-3 pr-3" target="_blank" rel="noopener noreferrer">Ver no TJDFT</a>
+    <div class="align-middle">
+    <a href="https://pje.tjdft.jus.br/consultapublica/ConsultaPublica/DetalheProcessoConsultaPublica/listView.seam?ca=<%= @judicial.url_origin %>" class = "btn btn-ghost" target="_blank" rel="noopener noreferrer">Ver no TJDFT</a>
+    </div>
   </div>
+
 </div>

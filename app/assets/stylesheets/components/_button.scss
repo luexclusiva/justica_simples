@@ -9,11 +9,12 @@
   color: black;
   background-color: white;
   border: 1px solid #4A4A4A;
-  padding: 8px 24px;
+  padding: 8px 24px !important;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 0.6;
   transition: opacity 0.3s ease;
+  text-align: center;
 }
 
 
@@ -42,11 +43,31 @@ input[type=submit] {
   color: white;
   background-color: $laranja_detran;
   font-size: 18px;
-  padding: 8px 24px !important;
+  padding: 8px 40px !important;
   border-radius: 50px;
   font-weight: lighter;
   opacity: 1;
   transition: opacity 0.3s ease;
+  // width: 160px !important;
+  text-align: center;
+
+    &:hover{
+      opacity: .6;
+      color: white;
+    }
+}
+
+.btn-laranja-submit{
+  color: white;
+  background-color: $laranja_detran;
+  font-size: 18px;
+  padding-top: 8px !important;
+  padding-bottom: 8px !important;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  width: 160px !important;
 
     &:hover{
       opacity: .6;
