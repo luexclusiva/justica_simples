@@ -28,6 +28,7 @@ import { initTyped } from "../lib/init_typed"
 import { modalFlux } from "../lib/fluxModal"
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
+import { clickTabFromOutside } from '../lib/click_tab_from_outside';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
@@ -35,7 +36,7 @@ document.addEventListener('turbolinks:load', () => {
   // modalDecision();
 
     modalDecision();
-
+    clickTabFromOutside();
     initTyped();
   }
 );

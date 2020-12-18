@@ -8,26 +8,26 @@
   <div class="flux text-center">
 
     <ol class="arrows mb-1 pl-0">
-      <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a href="#">
+      <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a href="#" class="clickTab" data-toggle='tab'>
         <span class="fa-stack <%= @phase[1] == 0 ? "destaque" : "fora-destaque" %>">
             <!-- The icon that will wrap the number -->
             <span class="far fa-circle fa-stack-2x <%= @phase[1] == 0 ? "text-muted" : "text-light" %>"></span>
             <!-- a strong element with the custom content, in this case a number -->
         </span>
       </a></li>
-      <li class="<%= if @phase[1] == 1 then "color-orange" elsif @phase[1] > 1 then "color-gray" end %>"><a href="#">
+      <li class="<%= if @phase[1] == 1 then "color-orange" elsif @phase[1] > 1 then "color-gray" end %>"><a href="#" class="clickTab" data-toggle='tab'>
           <span class="fa-stack <%= @phase[1] == 1 ? "destaque" : "fora-destaque" %>">
               <!-- The icon that will wrap the number -->
               <span class="far fa-handshake fa-stack-2x <%= @phase[1] == 1 ? "text-muted" : "text-light"  %>"></span>
               <!-- a strong element with the custom content, in this case a number -->
           </span>
       </a></li>
-      <li class= "<%= if @phase[1] == 2 then "color-orange" elsif @phase[1] > 2 then "color-gray" end %>"><a href="#">
+      <li class= "<%= if @phase[1] == 2 then "color-orange" elsif @phase[1] > 2 then "color-gray" end %>"><a href="#" class="clickTab" data-toggle='tab'>
         <span class="fa-stack <%= @phase[1] == 2 ? "destaque" : "fora-destaque" %>">
           <span class="far fa-file-alt fa-stack-2x <%= @phase[1] == 2 ? "text-muted" : "text-light"  %>"></span>
           </span>
       </a></li>
-      <li class= "<%= "color-orange pr-0 " if @phase[1] == 3 %>"><a href="#">
+      <li class= "<%= "color-orange pr-0 " if @phase[1] == 3 %>"><a href="#" class="clickTab" data-toggle='tab'>
         <span class="fa-stack <%= @phase[1] == 3 ? "destaque" : "fora-destaque" %>">
           <span class="fas fa-gavel fa-stack-2x <%= @phase[1] == 3 ? "text-muted" : "text-light"  %>"></span>
           </span>
@@ -66,10 +66,8 @@
   <div class="text-center">
     <small>
       <h5>
-
-        <a data-toggle='tab' href='#fluxograma'>Saiba mais</a>
+        <a data-toggle='tab' class="clickTab" href='#'>Saiba mais</a>
       </h5>
-
     </small>
   </div>
 </div>
