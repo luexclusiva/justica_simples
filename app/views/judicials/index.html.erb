@@ -1,6 +1,6 @@
 <div class="container jud-index">
   <% if @judicials.length.positive? %>
-    <h2 class="text-center">Processos encontrados:</h2>
+    <h4 class="text-center mt-3">Processos encontrados:</h4>
     <% @judicials.each do |judicial| %>
       <%=link_to judicial_path(judicial), class:"card card-judicial mt-3 ml-2 col-sm-12 col-md-5 mx-auto" do %>
         <div class="my-3 ml-3">
@@ -14,9 +14,9 @@
       <% end %>
     <% end %>
   <% else %>
-    <div class="text-center mt-5">
-      <h3>Não foi encontrado nenhum processo!</h3>
-      <div class="card ">
+    <div class="text-center mt-3">
+      <h4>Nenhum processo encontrado!</h4>
+      <div class="card mt-3">
         <div class="card-body">
           <h3 class="text-danger">Atenção</h3>
           <p>Este aplicativo é uma prova de conceito desenvolvido no curso da ENAP/Le Wagon.</p>
