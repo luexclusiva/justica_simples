@@ -1,11 +1,11 @@
 
-  <div class="d-flex justify-content-center mt-5" >
+  <div class="d-flex justify-content-center" >
     <h5>
       Em que fase estou?
     </h5>
   </div>
 <div class="fluxogram">
-  <div class="flux text-center border-bottom">
+  <div class="flux text-center">
 
     <ol class="arrows mb-1 pl-0">
       <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a href="#" class="clickTab" data-toggle='tab'>
@@ -61,12 +61,13 @@
       </h5>
 
       <p>Sua decisão está chegando! Se não concordar, pode recorrer.</p>
-    <% end %> 
+    <% end %>
   </div>
-  <div class="text-right">
+  <div class="text-center">
     <small>
-      <a data-toggle='tab' class="clickTab" href='#'>Saiba mais sobre as fases</a>
-
+      <h5>
+        <a data-toggle='tab' class="clickTab" href='#'>Saiba mais</a>
+      </h5>
     </small>
   </div>
 </div>
