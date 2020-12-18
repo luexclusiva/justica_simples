@@ -6,7 +6,7 @@
   </div>
 <div class="fluxogram">
   <div class="flux text-center border-bottom">
-  
+
     <ol class="arrows mb-1 pl-0">
       <li class="color-gray <%= @phase[1] == 0 ? "color-orange" : "color-gray" %>"><a href="#">
         <span class="fa-stack <%= @phase[1] == 0 ? "destaque" : "fora-destaque" %>">
@@ -34,34 +34,39 @@
       </a></li>
     </ol>
   </div>
-  <div class="mt-2">
+  <div class="mt-3">
     <% case @phase[1] %>
       <% when 0 %>
-      <h5 class="text-center"> 
-        Início do processo
+
+      <h5 class="text-center mt-1">
+        Apresentação dos pedidos e justificativas
       </h5>
-      <p>Por enquanto, nada a se preocupar.</p>
+      <p>Apresente seu pedido para o juiz</p>
+
       <% when 1 %>
-      <h5 class="text-center"> 
+      <h5 class="text-center mt-1">
         Tentativa de acordo
       </h5>
       <p>Fique atento às datas de audiências. Não falte!</p>
       <% when 2 %>
-      <h5 class="text-center"> 
+      <h5 class="text-center mt-1">
         Apresentação de provas
       </h5>
+
       <p>Prepare os documentos, chame as testemunhas.</p>
+
       <% else %>
-      <h5 class="text-center"> 
+      <h5 class="text-center mt-1">
         Decisão do processo
       </h5>
+
       <p>Sua decisão está chegando! Se não concordar, pode recorrer.</p>
     <% end %> 
   </div>
   <div class="text-right">
     <small>
       <a data-toggle='tab' href='#fluxograma'>Saiba mais sobre as fases</a>
+
     </small>
   </div>
 </div>
-

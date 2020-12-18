@@ -1,11 +1,13 @@
 <div class="container jud-index">
   <% if @judicials.length.positive? %>
-    <h4 class="text-center mt-3">Processos encontrados:</h4>
+
+    <h4 class="text-center mt-3 mb-3">Processos encontrados:</h4>
+
     <% @judicials.each do |judicial| %>
       <%=link_to judicial_path(judicial), class:"card card-judicial mt-3 ml-2 col-sm-12 col-md-5 mx-auto" do %>
         <div class="my-3 ml-3">
           <p class="mb-0 font-black">Processo nº:</p>
-          <h5 class="mt-0  border-bottom mr-2"><%= judicial.number %> </strong></h5>
+          <h5 class="mt-0  border-bottom mr-2"><%= judicial.number %></h5>
           <p class="mb-0 font-black">Partes:</p>
           <% judicial.parties.each do |party| %>
           <p class="judicial-parties font-black"><%= party.name %></p>
@@ -22,7 +24,9 @@
           <p>Este aplicativo é uma prova de conceito desenvolvido no curso da ENAP/Le Wagon.</p>
           <p>O banco de dados utilizado para desenvolvimento e teste não está conectado ao acervo de processo de nenhum Tribunal de Justiça.</p>
           <p>Para maiores informações sobre o seu processo, por favor, visite a página do Tribunal de Justiça em que tramita sua ação.</p>
-          <p>Para avaliar as funcionalidades deste aplicativo, realize buscas por "Banco do Brasil", "Tam Linhas Aéreas", "Via Varejo", "Lojas Renner", "Sky" ou "Redecard" na página inicial.</p>
+
+          <p>Para avaliar as funcionalidades deste aplicativo utilize as seguintes partes na busca da página inicial: Banco do Brasil, Tam Linhas Aéreas, Via Varejo, Lojas Renner, Sky ou Redecard.</p>
+
         </div>
       </div>
       <div class="mt-4">

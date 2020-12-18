@@ -3,7 +3,7 @@
   <!-- Dados do processo -->
   <div class="m-1 pt-2 pb-3">
     <p class="number_process pt-3 pb-3"><%= @judicial.number %></p>
-    <% @judicial.parties.each do |party| %>      
+    <% @judicial.parties.each do |party| %>
       <p class="judicial-parties"><%= "#{(party.role).capitalize}: #{party.name}" %></p>
     <% end %>
   </div>
@@ -11,7 +11,7 @@
   <!-- Último andamento -->
   <div class="card mb-3 mt-3">
     <div class="card-header">Último andamento - simplificado</div>
-    <div class="card-body text-dark">      
+    <div class="card-body text-dark">
       <% unless @judicial.judicial_steps.last.decision == "0" %>
         <a href="" class="stepModal" data-target="#decisionModal" data-toggle="modal" data-decision-text="<%= @judicial.judicial_steps.last.decision %>">
           <p><%= @judicial.judicial_steps.last.date.strftime("%d.%m.%Y") %> - <%= @judicial.judicial_steps.last.step.translation %></p>
@@ -26,13 +26,15 @@
 
 
   <!-- <a data-toggle="tab" href="#fluxograma" role="tab" aria-controls="fluxograma" aria-selected="false">
-        <%#= "#{@phase[0]}" %> </a> -->    
-  
-  <div class="div">    
-    <%= render partial: "new_fluxogram" %>    
+        = "#{@phase[0]}" %> </a> -->    
+
+  <div class="div">
+    <%= render partial: "new_fluxogram" %>
   </div>
 
+
   <div class="d-flex justify-content-around pb-3">
+
 
     <% if current_user %>
       <% @userjudicial_follow = UserJudicial.where(user_id: current_user.id, judicial_id: @judicial.id).first %>
