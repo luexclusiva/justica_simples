@@ -4,8 +4,12 @@
   align-items: center;
   justify-content: space-around;
   height: 50px;
+  width: 100%;
   padding: 0px 0px;
+  bottom: 0;
+  position:absolute;
   color: white;
+  overflow: hidden;
 }
 
 .footer img {
