@@ -4,6 +4,7 @@ const modalFlux = () => {
   if (fluxModal) {
     document.querySelectorAll(".stageModal").forEach((modalLink) => {
       modalLink.addEventListener("click", (event) => {
+        event.preventDefault();
         fluxModal.querySelector(".modal-body");
       })
     })
