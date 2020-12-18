@@ -114,5 +114,7 @@
 12617;Autos extintos por renúncia;1;O processo terminou sem o juiz precisar decidir o caso.;4
 99100;Audiência Conciliação designada;4;A audiência inicial, para ver se é possível um acordo entre as partes, foi marcada.;1
 99101;Juntada de Petição de contestação;2;O réu apresentou resposta.;3
-99103;Audiência Conciliação cancelada;4;A audiência para tentar o acordo foi cancelada.;2
+99103;Audiência Conciliação cancelada;4;A audiência para tentar o acordo foi cancelada.;1
 99104;Audiência Instrução e Julgamento designada;4;Audiência com o Juiz marcada.;4
+99105;Audiência Conciliação realizada;4;Audiência para tentar acordo foi realizada.;2 
+99106;Audiência Conciliação não realizada;4;Audiência para tentar acordo não foi realizada.;2 
